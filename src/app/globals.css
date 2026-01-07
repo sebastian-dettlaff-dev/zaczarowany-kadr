@@ -1,34 +1,53 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
+
+@theme {
+    /* Kolory Retro */
+    --color-retro-beige: #f5e6ca;   /* Tło - kolor papieru */
+    --color-retro-orange: #d97706;  /* Akcent - ciepły bursztyn */
+    --color-retro-grey: #4b5563;    /* Tekst pomocniczy */
+    --color-retro-black: #1f2937;   /* Główny tekst - głęboki grafit */
+	--color-retro-accent: #d97706;
+
+    /* Fonts from NEXT JS LAYOUT.TSX */
+ --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-
-	--color-retro-beige: #f5e6ca;
-	--color-retro-orange: #d97706;
-	--color-retro-grey: #4b5563;
-	--color-retro-black: #1f2937;
-	--font-serif: 'Georgia', serif;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
+/*  */
+@layer base{
+	/* body gets retro beige background and retro black text */
+	body{
+		@apply bg-retro-beige text-retro-black font-sans leading-relaxed;
 	}
+	/* All headings got serif font */
+	h1,h2,h3,h4{
+		@apply font-serif font-semibold tracking-tight text-white ;
+	}
+	h4{
+		@apply text-lg font-serif font-semibold tracking-tight;
+	}
+	/* All paragraphs use sans-serif font */
+	p,span{
+		@apply font-sans font-light text-lg;
+	}
+	button {
+		@apply font-mono bg-retro-beige  tracking-widest transition-all duration-400;
+	}
+	button:hover {
+    @apply text-retro-beige opacity-70 bg-gray-800; 
+    /* Albo np. delikatne przesunięcie w górę */
+    @apply -translate-y-0.5;
 }
-
-body {
-	background: var(--background);
-	color: var(--foreground);
-	background-color: var(--color-retro-beige);
-	color: var(--color-retro-black);
-	/* font-family: Arial, Helvetica, sans-serif; */
+a {
+	@apply text-lg;
+}
+}
+@theme {
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  --animate-fade-up: fade-up 2s ease-out forwards;
 }

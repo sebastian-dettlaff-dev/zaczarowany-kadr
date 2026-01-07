@@ -7,5 +7,5 @@ export const COMPANY_ADDRESS_SIMPLE = "Wejherowo, Polska";
 export const SOCIAL_MEDIA = {
     facebook: "https://www.facebook.com/share/1GEermh7Vm/",
     instagram: "https://www.instagram.com/zaczarowanykadr_by_klaudia?igsh=MXBvdGI3dDc4cnp0Zw==",
-    TIKTOK: "https://shorturl.at/uNd0C"
+    tiktok: "https://shorturl.at/uNd0C"
 };
