@@ -33,7 +33,7 @@
 		@apply font-sans font-light text-lg;
 	}
 	button {
-		@apply font-mono bg-retro-beige  tracking-widest transition-all duration-400;
+		@apply font-mono bg-retro-beige  tracking-widest transition-all duration-400 text-retro-black cursor-pointer;
 	}
 	button:hover {
     @apply text-retro-beige opacity-70 bg-gray-800; 

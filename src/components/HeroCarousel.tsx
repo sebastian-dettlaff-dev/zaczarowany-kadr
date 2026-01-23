@@ -48,7 +48,7 @@ export default function HeroCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })])
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[75vh] bg-gray-100 overflow-hidden" ref={emblaRef}>
+    <section className="relative w-full h-[60vh] md:h-[100vh] bg-gray-100 overflow-hidden" ref={emblaRef}>
       <div className="flex h-full">
         {SLIDES.map((slide, index) => (
           <div key={slide.id} className="relative flex-[0_0_100%] min-w-0 h-full">

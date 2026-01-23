@@ -4,7 +4,7 @@ export default function AboutMeIntro() {
 		<>
 			<section className='relative w-full h-auto py-16  md:py-24 flex flex-col items-center justify-center overflow-hidden'>
 				{/* Obraz tła z fotografką */}
-				<h1 className='z-10 font-bold justify-center items-center p-8 ml-8 mr-8 text-6xl'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+				<h1 className="sr-only">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
 				<div className='absolute inset-0 z-0'>
 					<Image
 						src='/assets/images/pexels-lukas-rodriguez-1845331-3680219.jpg' // Zmień na ścieżkę do Twojego zdjęcia
@@ -15,14 +15,14 @@ export default function AboutMeIntro() {
 				</div>
 
 				<div
-					className='relative z-10 max-w-7xl md:max-w-9xl  flex flex-col-reverse md:flex-row items-center 
+					className='relative z-10 max-w-6xl md:max-w-9xl  flex flex-col-reverse md:flex-row items-center 
                       gap-12 p-8 md:p-16
                       bg-white/10 backdrop-blur-md  /* To tworzy efekt szkła */
                       border border-white/20        /* Delikatna krawędź szkła */
                       rounded-3xl shadow-2xl'
 				>
 					{/* LEWA STRONA: "POLAROIDY" Z PRZYKŁADAMI ZDJĘĆ */}
-					<div className='w-full md:w-2/3 grid grid-cols-2 gap-1 md:gap-1 pt-10 pb-10'>
+					<div className='hidden w-full md:w-2/3 md:grid md:grid-cols-2 gap-1 pt-10 pb-10'>
 						{/* KARTA POLAROID 1 */}
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 -rotate-6 translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
@@ -87,10 +87,21 @@ export default function AboutMeIntro() {
 
 						{/* Możesz dodać więcej polaroidów, kopiując powyższe bloki */}
 					</div>
+					{/* <div className='block md:hidden w-full'>
+            <div className='relative aspect-[3/4] w-full max-w-[300px] mx-auto border-[12px] border-white shadow-lg rotate-2'>
+                <Image 
+                    src='/assets/images/twoje-glowne.jpg' 
+                    fill 
+                    className='object-cover' 
+                    alt='Klaudia - fotograf'
+                />
+                <div className='absolute bottom-2 right-2 text-[10px] text-gray-400 font-mono'>FRAME #01</div>
+            </div>
+        </div> */}
 
 					{/* PRAWA STRONA: TEKST "O MNIE" */}
 					<div className='w-full md:w-1/2 space-y-6 text-center md:text-left'>
-						<h2 className='text-4xl md:text-5xl font-bold '>
+						<h2 className='text-4xl md:text-5xl font-bold mt-4 p-2'>
 							O mnie
 						</h2>
 						<p className=' leading-relaxed'>

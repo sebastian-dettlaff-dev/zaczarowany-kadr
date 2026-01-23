@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { COMPANY_NAME, COMPANY_PHONE } from '@/lib/constants';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -28,26 +29,27 @@ export default function Footer() {
 					<ul className='flex flex-col gap-2'>
 						<li>
 							<Link
+								href='/'
+								className='hover:text-retro-orange transition'
+							>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link
 								href='/Portfolio'
 								className='hover:text-retro-orange transition'
 							>
 								Portfolio
 							</Link>
 						</li>
+					
 						<li>
 							<Link
-								href='/uslugi'
+								href='/oferta'
 								className='hover:text-retro-orange transition '
 							>
-								Usługi
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/o-mnie'
-								className='hover:text-retro-orange transition'
-							>
-								Cennik
+								Oferta
 							</Link>
 						</li>
 						<li>
@@ -55,6 +57,20 @@ export default function Footer() {
 								Blog
 							</Link>
 						</li>
+						<li>
+							<Link href='/faq' className='hover:text-retro-orange transition'>
+								FAQ
+							</Link>
+						</li>
+						<li>
+							<Link
+								href='/cennik'
+								className='hover:text-retro-orange transition'
+							>
+								Cennik
+							</Link>
+						</li>
+						
 					</ul>
 				</div>
 

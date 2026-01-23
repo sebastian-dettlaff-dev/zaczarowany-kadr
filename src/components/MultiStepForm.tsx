@@ -1,0 +1,309 @@
+"use client";
+import {useState} from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import StepOne from "./StepOne";
+import StepSecond from "./StepSecond";
+import StepThird from "./StepThird";
+import StepFourth from "./StepFourth";
+import StepFifth from "./StepFifth";
+import StepSixth from "./StepSixth";
+import StepSeventh from "./StepSeventh";
+import StepEighth from "./StepEighth";
+import SuccessScreen from "./SuccessScreen"
+import { submitContactForm } from "@/app/actions/sendEmail"; 
+
+//  DEFINE THE FORM DATA STRUCTURE
+export interface FormData {
+    name: string;
+    sessionType: string;
+    plan: string;
+    email: string;
+    phone: string;
+    date_Of_Session: string;
+    timeSlot: string
+    message: string;
+}
+// const totalSteps =8;
+const totalSteps=9;
+
+
+export default function MultiStepForm() {
+    const [step, setStep] = useState(0);
+   
+    
+// HOLD FORM DATA IN STATE
+    const [formData, setFormData] =useState<FormData>({
+       
+        sessionType: " ",
+        plan:"",
+        date_Of_Session: "",
+        timeSlot:"",
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    // keyof FormData ensures that only valid keys can be used : 
+    const nextStep = (field:keyof FormData, value: string) => {
+        setFormData(
+            (prev) =>
+            ({...prev, [field]: value})
+        );
+        // Automatically proceed to next step after updating a field
+        setStep((prev) => prev +1);
+    };
+
+    // const NextStep = () => {
+    //     setStep((prev) => prev +1);
+    // }
+
+    // Back to previous step manually
+    const prevStep = () => {
+        setStep((prev) => Math.max(prev -1,0));
+    }
+    const updateField = (field:keyof FormData, value:string) => {
+        setFormData(
+            (prev) => ({...prev, [field]: value})
+        );
+    };
+
+
+// const handleFinalSubmit = async () => {
+//     try {
+//         // Wywołujemy akcję serwerową z naszymi danymi
+//         const result = await submitContactForm(formData);
+        
+//         if (result.success) {
+//             alert("System Ready: Wiadomość została wysłana pomyślnie!");
+//             // Reset of contact form
+//             setStep(0); 
+//         } else {
+//             alert("Wystąpił błąd podczas wysyłania. Spróbuj ponownie.");
+//         }
+//     } catch (error) {
+//         console.error("Błąd krytyczny:", error);
+//         alert("Nie udało się połączyć z serwerem.");
+//     }
+// };
+const handleFinalSubmit = async () => {
+  try {
+    const result = await submitContactForm(formData);
+    if (result.success) {
+      // Zamiast alertu, idziemy do kroku nr 8 
+      setStep(8); 
+    } else {
+      alert("Błąd serwera. Spróbuj ponownie.");
+    }
+  } catch (error) {
+    console.error("BŁĄD PODCZAS WYSYŁKI:", error);
+    alert("Błąd połączenia.");
+  }
+};
+    return (
+        
+//         <div className="relative w-full  md:w-full
+//                 min-h-[550px] md:aspect-video 
+//                 bg-transparent border border-white/20 
+//                 p-8 md:p-12 
+//                 shadow-2xl flex flex-col justify-center overflow-hidden"
+//                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop')" }}
+//                 >
+  
+//   {/* ELEMENTY CELOWNIKA - mniejsze na mobile */}
+//   <span className="absolute top-2 left-2 md:top-4 md:left-4 w-6 h-6 md:w-8 md:h-8 border-t-2 border-l-2 border-white/80"></span>
+//   <span className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border-t-2 border-r-2 border-white/80"></span>
+//   <span className="absolute bottom-2 left-2 md:bottom-4 md:left-4 w-6 h-6 md:w-8 md:h-8 border-b-2 border-l-2 border-white/80"></span>
+//   <span className="absolute bottom-2 right-2 md:bottom-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border-b-2 border-r-2 border-white/80"></span>
+
+//   {/* SIATKA - ukrywamy na bardzo małych ekranach, by nie przeszkadzała w czytaniu */}
+//   <div className="absolute inset-0 pointer-events-none hidden xs:block">
+//     <div className="absolute left-1/3 top-0 bottom-0 w-[0.5px] bg-white/10"></div>
+//     <div className="absolute left-2/3 top-0 bottom-0 w-[0.5px] bg-white/10"></div>
+//     <div className="absolute top-1/3 left-0 right-0 h-[0.5px] bg-white/10"></div>
+//     <div className="absolute top-2/3 left-0 right-0 h-[0.5px] bg-white/10"></div>
+//   </div>
+
+//   {/* TREŚĆ */}
+//   <div className="relative z-10 w-full">
+//     <h2 className="text-white text-xl md:text-3xl font-light mb-6 md:mb-8 tracking-widest uppercase text-center md:text-left">
+//       {step === 0 ? "Get In Touch" : "Details"}
+//     </h2>
+    
+//     <div className="w-full">
+//       {step === 0 && <StepOne formData={formData} nextStep={nextStep} />}
+//       {step === 1 && <StepSecond formData={formData} nextStep={nextStep} prevStep={prevStep} />}
+//     </div>
+//   </div>
+
+//   {/* Status REC na dole */}
+//   <div className="absolute bottom-4 left-0 right-0 flex justify-between px-8 items-center">
+//      <span className="text-[10px] text-white/50 font-mono animate-pulse">● REC</span>
+//      <span className="text-[10px] text-white/50 font-mono">{step + 1} / 8</span>
+//   </div>
+// </div>
+
+
+
+    //  <div className=" min-h-screen flex flex-col items-center justify-center p-6 bg-[#0f172a]  bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]">
+    //     <div className="max-w-md h-auto mx-auto bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-8 shadow-2xl
+    //     bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]
+    //     ">
+        
+    //         {step === 0 && (
+    //             <StepOne formData={formData} nextStep={nextStep} />
+    //         )}
+    //         {step === 1 && (
+    //             <StepSecond formData={formData} nextStep={nextStep} prevStep={prevStep} />
+    //         )}
+    //         {/* {step === 2 && ( 
+    //             <StepFourth formData={formData} nextStep={nextStep} prevStep={prevStep} />
+    //         )}
+    //          {step === 2 && (
+    //             <StepFifth formData={formData} nextStep={nextStep} prevStep={prevStep} />
+    //         )}
+    //          {step === 2 && (
+    //             <StepSixth formData={formData} nextStep={nextStep} prevStep={prevStep} />
+    //         )}
+    //          {step === 2 && (
+    //             <StepSeventh formData={formData} nextStep={nextStep} prevStep={prevStep} />
+    //         )}
+    //          {step === 2 && (
+    //             <StepEighth formData={formData} nextStep={nextStep} prevStep={prevStep} />
+    //         )} */}
+    //         Wyświetlamy podgląd tego, co już wpisano (do testów)
+    //   <pre className="mt-10 text-[10px] bg-stone-100 p-2">
+    //     {JSON.stringify(formData, null, 2)}
+    //   </pre>
+    //     </div>
+    //     </div>
+
+
+// bg-[#9f2828] bg-[#253587] [#0d8383] [#31327f]
+
+    <div className="relative bg-[#1e1646] h-auto flex flex-col items-center justify-center p-6">
+        <div className="absolute inset-0  bg-[radial-gradient(circle_at_bottom,_rgba(40,40,40,0.8)_0%,_rgba(10,10,10,0.5)_40%,_rgba(0,0,0,1)_80%)]"></div>
+        <div className="relative max-w-2xl w-full ">
+         <div className="relative bg-white/00.7 backdrop-blur-xl border border-white/10  rounded-3xl p-10 shadow-2xl overflow-hidden shadow-black/50">
+         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.05] to-transparent pointer-events-none"></div>
+
+         {/* Progress bar and divider area */}
+         <div className="mb-10">
+             <div className="flex justify-between text-[10px] text-white/40 mb-2 uppercase tracking-widest">
+            <span>Mode: Manual</span>
+            <span>ETAP: 0{step + 1} / 0{totalSteps}</span>
+          </div>
+           
+             <div className="relative h-[2px] bg-white/10">
+             {/* 1. Podziałka (Kreski w tle) */}
+    <div className="absolute inset-0 border-t border-white/20 flex justify-between px-1">
+      {[...Array(25)].map((_, i) => (
+        <div 
+          key={i} 
+          className={`w-[1px] transition-colors duration-500 ${
+            // Sprawdzamy, czy pasek już "przeszedł" przez tę kreskę, żeby ją podświetlić
+            (i / 25) * 100 <= ((step + 1) / totalSteps) * 100 
+              ? 'bg-cyan-400/60' 
+              : 'bg-white/20'
+          } ${i % 5 === 0 ? 'h-4' : 'h-2'}`}
+        ></div>
+      ))}
+    </div>
+            <motion.div 
+              className="absolute top-0 left-0 h-full bg-cyan-400 shadow-[0_0_15px_#22d3ee]"
+              animate={{ width: `${((step + 1) / totalSteps) * 100}%` }}
+            />
+            
+          </div>
+            {/* divider */}
+            {/* <div className="relative h-6 border-t border-white/20 flex justify-between px-1">
+            {[...Array(20)].map((_, i) => (
+                <div key={i} className={`w-[1px] ${i % 5 === 0 ? 'h-3 bg-white/40' : 'h-1.5 bg-white/20'}`}></div> */}
+            {/* //   <div key={i} className="w-1 h-1 bg-white/20 rounded-full"></div> */}
+            {/* ))} */}
+            {/* progress bar */}
+            {/* <div className="absolute top-[-1px] left=0 h-[2px] bg-cyan-400 transition-all duration-500 shadow-[0_0_10px_#22d3ee]"
+            style={{ width: `${((step + 1) / 8) * 100}%` }}></div> */}
+            </div>
+         </div>
+
+
+
+         {/* <div className="relative z-10 min-h-[400px]">
+            <p className="text-white text-sm tracking-tighter uppercase">Krok {step + 1}</p>
+            <div className="relative space-y-6 ">
+                {step === 0 &&
+                 (<StepOne formData={formData} nextStep={nextStep} />)}
+                 {step === 1 &&
+                 (<StepSecond formData={formData} nextStep={nextStep} />)}
+                 {step === 2 &&
+                 (<StepThird formData={formData} nextStep={nextStep} />)}
+                 {step === 4 &&
+                 (<StepFourth formData={formData} nextStep={nextStep} />)}
+                 {step === 5 &&
+                 (<StepFifth formData={formData} nextStep={nextStep} />)}
+                 {step === 6 &&
+                 (<StepSixth formData={formData} nextStep={nextStep} />)}
+                 {step === 7 &&
+                 (<StepSeventh formData={formData} nextStep={nextStep} />)}
+                 
+                 
+            </div>
+         </div> */}
+           <div className="min-h-[300px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={step}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+            >
+              {step === 0 && <StepOne formData={formData} nextStep={nextStep} />}
+              {step === 1 && <StepSecond formData={formData} nextStep={nextStep}  />}
+               {step === 2 &&
+                 (<StepThird formData={formData} nextStep={nextStep} />)}
+                 {step === 3 &&
+                 (<StepFourth formData={formData} nextStep={nextStep}  />)}
+                 {step === 4 &&
+                 (<StepFifth formData={formData} nextStep={nextStep} updateField={updateField} />)}
+                 {step === 5 &&
+                 (<StepSixth
+                  formData={formData} nextStep={nextStep} updateField={updateField} />)}
+                 {step === 6 &&
+                 (<StepSeventh formData={formData} nextStep={nextStep} updateField={updateField} />)}
+                 {step === 7 &&
+                 (<StepEighth formData={formData} nextStep={nextStep} updateField={updateField} onComplete={handleFinalSubmit} />)}
+                 {step === 8 && <SuccessScreen />}
+              
+            </motion.div>
+          </AnimatePresence>
+
+        </div>   
+        {/* footer-status and tryb */}
+      
+
+             <div className="mt-8 pt-6 border-t border-white/5 flex justify-between items-center text-[9px] text-white/30 tracking-[0.2em]">
+           <div className="flex items-center gap-2">
+             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+             SYSTEM READY
+             
+           </div>
+           <button onClick={prevStep} className="hover:text-red-600 transition-colors bg-transparent text-white text-lg">
+              POPRZEDNI KROK 
+           </button>
+        </div>
+
+
+          {/* Wyświetlamy podgląd tego, co już wpisano (do testów)
+    //   <pre className="mt-10 text-[10px] bg-stone-100 p-2">
+    //     {JSON.stringify(formData, null, 2)}
+    //   </pre> */}
+        </div>
+        
+    </div>
+
+        );
+    }
+   
+
+
+
