@@ -37,7 +37,7 @@ export default function Footer() {
 						</li>
 						<li>
 							<Link
-								href='/Portfolio'
+								href='/portfolio'
 								className='hover:text-retro-orange transition'
 							>
 								Portfolio

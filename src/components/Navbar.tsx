@@ -159,7 +159,7 @@ export default function Navbar() {
                 {/* LINKI - DESKTOP */}
                 <div className='hidden md:flex gap-8 items-center font-medium'>
 					<Link href='/' className='text-white hover:text-retro-orange transition-colors'>Home</Link>
-                    <Link href='/Portfolio' className='text-white hover:text-retro-orange transition-colors'>Portfolio</Link>
+                    <Link href='/portfolio' className='text-white hover:text-retro-orange transition-colors'>Portfolio</Link>
 					<Link href='/oferta' className='text-white hover:text-retro-orange transition-colors'>Oferta</Link>
                     <Link href='/blog' className='text-white hover:text-retro-orange transition-colors'>Blog</Link>
                     <Link href='/faq' className='text-white hover:text-retro-orange transition-colors'>FAQ</Link>

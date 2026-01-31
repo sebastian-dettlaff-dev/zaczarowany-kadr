@@ -7,13 +7,13 @@ import Image from 'next/image';
 // Metadata for servises page
 export const metadata: Metadata = {
   title: 'Oferta Sesji', // Next automatycznie zamieni to na "Oferta Sesji | Zaczarowany Kadr"
-  description: 'Sprawdź rodzaje sesji: plener, domowe studio , rodzinne oraz indywidualne , okolicznosciowe i narzeczenskie.A moze kobiece lub wizerunkowe.DDostosujemy sie do ciebie!',
+  description: 'Sprawdź rodzaje sesji: plener, domowe studio , rodzinne oraz indywidualne , okolicznosciowe i narzeczenskie.A moze kobiece lub wizerunkowe.Dostosuje sie do ciebie!',
   //You don;t need openGraph here as it's inherited from layout.tsx
 //   You need only schema data JSON-LD if it's different from the main page - so only specific services offered on this page
 };
 export default function Offer() {
   return (
-    <section className="py-20 px-2 md:px-6">
+    <main className="py-20 px-2 md:px-6">
       <div className="max-w-6xl mx-auto">
           <div className="md:hidden block text-center mb-16 mt-16">
                     <span className="text-retro-orange uppercase tracking-[0.3em] text-xs font-bold">Twoja wymarzona sesja w miłej atmosferze.</span>
@@ -24,7 +24,7 @@ export default function Offer() {
           <h1 className="pt-16 mb-4 text-2xl text-retro-black">
             Twoja wymarzona sesja w miłej atmosferze. Sprawdź{" "}
             <span className="font-bold">
-              <Link href="/cennik" className="hover:text-retro-orange transition-colors">ofertę</Link>
+              <Link href="/cennik" className="hover:text-retro-orange transition-colors">ofertę cenowa</Link>
             </span>{" "}
             i{" "}
             <span className="font-bold">
@@ -412,7 +412,7 @@ export default function Offer() {
 
         </div>
       </div>
-    </section>
+    </main>
   );
 }
 

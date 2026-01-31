@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-
+@plugin "@tailwindcss/typography";
 @theme {
     /* Kolory Retro */
     --color-retro-beige: #f5e6ca;   /* Tło - kolor papieru */
