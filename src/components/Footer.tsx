@@ -114,8 +114,7 @@ export default function Footer() {
 					<h4 className='font-bold mb-4 uppercase tracking-widest text-retro-orange'>
 						Godziny pracy
 					</h4>
-					<p >Pon - Pt: 09:00 - 18:00</p>
-					<p >Soboty: Na zapisy</p>
+					<p >Pon - Sob: 09:00 - 20:00</p>
 				</div>
 			</div>
 

@@ -7,11 +7,11 @@ export default function AboutMeIntro() {
 				<h1 className="sr-only">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
 				<div className='absolute inset-0 z-0'>
 					<Image
-						src='/assets/images/aparaty.jpg' // Zmień na ścieżkę do Twojego zdjęcia
+						src='/assets/images/profesjonalny-aparat-fotograficzny-na-stoliku.webp' // Zmień na ścieżkę do Twojego zdjęcia
 						alt='Fotografka robiąca zdjęcia'
 						fill
 						priority
-						className='object-cover opacity-60 object-[40%_20%] md:object-[90%_30%]'
+						className='object-cover opacity-60 object-[40%_20%] md:object-20%_90%]'
 						// style={{objectPosition: '70% 70%'}} // Niska przezroczystość, aby tekst był czytelny
 					/>
 				</div>
@@ -45,7 +45,7 @@ export default function AboutMeIntro() {
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 rotate-12 -translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/chwile-piekne.jpg' // Zmień na ścieżkę do Twojego zdjęcia
+									src='/assets/images/fotograf__trojmiescie_klaudia_zaczarowany_kadr.webp' // Zmień na ścieżkę do Twojego zdjęcia
 									alt='Piękne chwile'
 									fill
 									className='object-cover'
@@ -60,7 +60,7 @@ export default function AboutMeIntro() {
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 rotate-12 -translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/chwile-piekne.jpg' // Zmień na ścieżkę do Twojego zdjęcia
+									src='/assets/images/fotograf_domowy_i_plenerowy_na_kaszubach.webp' // Zmień na ścieżkę do Twojego zdjęcia
 									alt='Piękne chwile'
 									fill
 									className='object-cover'

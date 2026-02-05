@@ -181,10 +181,10 @@ export default function Navbar() {
                 `}
             >
 				<Link href='/' className='hover:text-retro-orange pt-40' onClick={() => setIsOpen(false)}>Home</Link>
-                <Link href='/Portfolio' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Portfolio</Link>
-				<Link href='/oferta' className=' hover:text-retro-orange transition-colors'>Oferta</Link>
+                <Link href='/portfolio' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Portfolio</Link>
+				<Link href='/oferta' className=' hover:text-retro-orange transition-colors' onClick={()=>setIsOpen(false)}>Oferta</Link>
                 <Link href='/blog' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Blog</Link>
-				<Link href='/faq' className=' hover:text-retro-orange transition-colors'>FAQ</Link>
+				<Link href='/faq' className=' hover:text-retro-orange transition-colors' onClick={()=>setIsOpen(false)}>Q&A</Link>
                 <Link href='/cennik' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Cennik</Link>
                 <Link
                     href='/kontakt'

@@ -1,12 +1,21 @@
 'use client'
 import useEmblaCarousel from 'embla-carousel-react'
-import { div } from 'framer-motion/client';
 import Image from 'next/image'
 import { useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
+import {CldImage} from 'next-cloudinary';
+import { getCldImageUrl } from 'next-cloudinary'
 
-export default function CategorySlider({ images }: { images: string[] }) {
-  const [selectedImage ,setImage] = useState<string | null>(null);
+interface PortfolioImage {
+  id:string;
+  alt:string;
+}
+
+
+
+
+export default function CategorySlider({ images }: { images: PortfolioImage[] }) {
+  const [selectedImage ,setImage] = useState<PortfolioImage | null>(null);
 
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start', 
@@ -19,17 +28,24 @@ export default function CategorySlider({ images }: { images: string[] }) {
     <>
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex gap-4 px-6"> 
-        {images.map((src, index) => (
+        {images.map((imgObject, index) => (
           <div 
             key={index} 
             className="flex-[0_0_80%] md:flex-[0_0_30%] min-w-0 relative h-[300px] cursor-zoom-in"
-            onClick={() => setImage(src)}
+            onClick={() => setImage(imgObject)}
           >
-            <Image
-              src={src}
-              alt="Fotografia"
-              fill
-              className="object-cover rounded-sm"
+            <CldImage
+            src={imgObject.id}
+            alt={imgObject.alt}
+            fill
+            className='object-cover rounded-sm'
+            sizes="(max-width: 768px) 80vw, 30vw"
+            deliveryType='upload'
+            crop="thumb"
+            gravity='face'
+            zoom="0.5"
+            format="auto"
+            quality='auto'
             />
           </div>
         ))}
@@ -52,10 +68,28 @@ export default function CategorySlider({ images }: { images: string[] }) {
                 transition={{type: "spring", damping: 25, stiffness:300}}
                 className='relative w-[80vw] h-[70vh]'
                 >
-                    <Image src={selectedImage} fill className='object-contain' alt='' />
 
+                  <CldImage 
+                  priority
+                  src={selectedImage.id}
+                  fill
+                  className='object-contain'
+                  alt={selectedImage.alt}
+                  sizes="80vw"
+                  deliveryType='upload'
+                  format='auto'
+                  quality="auto"
+                  crop="limit"
+                  placeholder='blur'
+                  blurDataURL={getCldImageUrl({
+                    src: selectedImage.id,
+                    width: 10,
+                    blur: "1000",
+                    quality:10
                     
-                    
+                  })}
+                  
+                  />
                 </motion.div>
                 </motion.div>
            
@@ -64,15 +98,3 @@ export default function CategorySlider({ images }: { images: string[] }) {
         </>
   )
 }
- {/* <div className='z-100 fixed inset-0 bg-black/30 backdrop-blur-md flex flex-col items-center justify-center p-4 animate-in fade-in duration-300'
-            onClick={() => setImage(null)}>
-                
-                <div className='relative max-w-5xl w-full h-[80vh]'>
-                    <Image
-                    src={selectedImage}
-                    fill
-                    alt =""
-                    className='object-contain'
-                    />
-                </div>
-            </div> */}
