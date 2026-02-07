@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Introduction() {
     return(
-        // <RetroLens  title="Zaczarowany Kadr" description="Witaj w świecie fotografii z przeszłości, gdzie każdy obraz ma swoją historię." />
+        
         <>
         <div className=" bg-gradient-to-b from-white to-transparent z-10shadow-2xl -mt-10 p-20 flex flex-col md:flex-row gap-0 justify-center items-center">
   

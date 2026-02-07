@@ -48,7 +48,7 @@ export default function Offer() {
             {/* Background Image */}
             <Image 
               src="/assets/images/Rodzinna-sesja-dzieci-bawia-sie-na-biwaku.webp" 
-              alt="Sesja Rodzinna w plenerze.Dzieci biwakuja w lesie." 
+              alt="Sesja Rodzinna w plenerze.Dzieci biwakuja w parku , okolice Malego Trojmiasta." 
               fill 
               priority 
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -63,7 +63,7 @@ export default function Offer() {
                 Sesja Rodzinna
               </h2>
               <p className="mb-6 max-w-sm text-white/80 font-light leading-relaxed text-[clamp(0.9rem,1.1vw,1rem)]">
-                Naturalna sesja rodzinna to idealny sposób na zatrzymanie wspólnych chwil i autentycznych emocji w domowym zaciszu lub plenerze. Tworzę swobodną atmosferę, w której każde dziecko i dorosły czuje się w pełni komfortowo przed obiektywem. Wybierz pamiątkę na lata i zamów profesjonalne zdjęcia rodzinne, które opowiedzą Waszą wyjątkową historię.
+               Poczuj się swobodnie podczas <strong>naturalnej sesji rodzinnej w Wejherowie</strong>. W domu lub plenerze uwiecznię Wasze autentyczne emocje. Zamów zdjęcia, które zostaną z Wami na lata i odbierz je w wygodnej <strong>galerii online</strong>.
               </p>
 
               {/* Mobile Only Links */}
@@ -107,8 +107,8 @@ export default function Offer() {
             
             {/* Background Image */}
             <Image 
-              src="/assets/images/sesja-kobieca-w-plenerze.webp" 
-              alt="Sesja Kobieca" 
+              src="/assets/images/kobieta_z_talia_kart_sesja_fotograficzna_fx6ecj.webp" 
+              alt="Sesja Kobieca - kobieta w studio domowym na sesji fotograficznej , okolice Trojmiasta." 
               fill 
               priority 
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -123,7 +123,7 @@ export default function Offer() {
                 Sesja Kobieca
               </h2>
               <p className="mb-6 max-w-sm text-white/80 font-light leading-relaxed text-[clamp(0.9rem,1.1vw,1rem)]">
-                Zmysłowa sesja kobieca  pozwoli Ci spojrzeć na siebie z zupełnie nowej, pełnej pewności siebie perspektywy. Podczas spotkania w studio lub plenerze dbam o subtelne światło i detale, które podkreślą Twoje naturalne piękno i wyjątkowy charakter. Podaruj sobie chwilę luksusu.
+                <strong>Zmysłowa sesja kobieca w Wejherowie</strong>. Nie musisz potrafić pozować – pomogę Ci poczuć się swobodnie przed obiektywem. W studio lub plenerze stworzymy naturalne zdjęcia buduarowe, które podkreślą Twoje piękno i pewność siebie.
               </p>
 
               {/* Mobile Only Links */}
@@ -168,7 +168,7 @@ export default function Offer() {
             {/* Background Image */}
             <Image 
               src="/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg" 
-              alt="Sesja Okolicznosciowa" 
+              alt="Sesja Okolicznosciowa jako pamiatka rodzinna dla twoich najblizszych." 
               fill 
               priority 
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -183,7 +183,7 @@ export default function Offer() {
                 Sesja Okolicznościowa
               </h2>
               <p className="mb-6 max-w-sm text-white/80 font-light leading-relaxed text-[clamp(0.9rem,1.1vw,1rem)]">
-                Profesjonalna fotografia okolicznościowa to gwarancja, że najważniejsze wydarzenia w Twoim życiu zostaną uwiecznione z najwyższą dbałością o detale. Towarzyszę Wam podczas chrztów, komunii czy jubileuszy, wyłapując nieuchwytne gesty i uśmiechy bliskich. Wracajcie do tych radosnych wspomnień w każdej chwili.
+                <strong>Fotografia okolicznościowa</strong> w Małym Trójmieście i na Kaszubach. Reportaż z chrztu, komunii czy jubileuszu z wygodną <strong>galerią online</strong> dla gości. Zachowaj najważniejsze emocje na profesjonalnych zdjęciach, które staną się cenną pamiątką rodzinną.
               </p>
 
               {/* Mobile Only Links */}
@@ -228,7 +228,7 @@ export default function Offer() {
             {/* Background Image */}
             <Image 
               src="/assets/images/sesja-wizerunkowa.webp" 
-              alt="Sesja Wizerunkowa" 
+              alt="Sesja Wizerunkowa do portfolio , w klasycznym studio domowym w Wejherowie." 
               fill 
               priority 
               className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -243,7 +243,7 @@ export default function Offer() {
                 Sesja Wizerunkowa
               </h2>
               <p className="mb-6 max-w-sm text-white/80 font-light leading-relaxed text-[clamp(0.9rem,1.1vw,1rem)]">
-                Skuteczna sesja wizerunkowa to klucz do budowy profesjonalnej marki osobistej i zaufania w relacjach biznesowych. Tworzę nowoczesne portrety, które idealnie sprawdzą się na LinkedIn, stronie WWW czy w mediach społecznościowych, oddając Twój profesjonalizm. Zamów zdjęcia biznesowe, które wyróżnią Cię na tle konkurencji i podkreślą Twoje kompetencje.
+                Profesjonalna <strong>sesja wizerunkowa i biznesowa</strong> w Wejherowie i na Kaszubach. Tworzę nowoczesne portrety na LinkedIn i strony WWW, które budują markę osobistą. Zamów <strong>zdjęcia biznesowe w Małym Trójmieście</strong> i wyróżnij się na tle konkurencji.
               </p>
 
               {/* Mobile Only Links */}
@@ -288,7 +288,7 @@ export default function Offer() {
             {/* Background Image */}
             <Image 
               src="/assets/images/sesja_ciazowa_i_noworodkowa.webp" 
-              alt="Sesja Ciążowa i Noworodkowa" 
+              alt="Sesja Ciążowa i Noworodkowa w profesjonalnm studio fotograficznym ZaczarowanyKadr" 
               fill 
               priority 
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -303,7 +303,7 @@ export default function Offer() {
                 Sesja Ciążowa i Noworodkowa
               </h2>
               <p className="mb-6 max-w-sm text-white/80 font-light leading-relaxed text-[clamp(0.9rem,1.1vw,1rem)]">
-                Wyjątkowa sesja ciążowa i noworodkowa pozwala celebrować czas oczekiwania i pierwsze dni życia Twojego maluszka w bezpiecznych warunkach. Skupiam się na delikatności, miłości i czułości, tworząc kadry pełne ciepła, które staną się najcenniejszą rodzinną pamiątką. Zaplanuj sesję brzuszkową, aby uwiecznić ten magiczny stan w estetyczny i ponadczasowy sposób.
+                <strong>Sesja ciążowa i noworodkowa</strong> w Wejherowie to niezapomniana pamiątka na lata. W moim <strong>studiu domowym</strong> stworzymy czułe kadry do albumu Twojego maluszka. Wybierz profesjonalną sesję brzuszkową, by uwiecznić ten magiczny stan w naturalny i ponadczasowy sposób.
               </p>
 
               {/* Mobile Only Links */}
@@ -347,8 +347,8 @@ export default function Offer() {
             
             {/* Background Image */}
             <Image 
-              src="/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg" 
-              alt="Sesja narzeczeńska / dla par" 
+              src="/assets/images/i_said_yes_powiedzialam_tak_sesja_narzeczenska_qzscr1.webp" 
+              alt="Sesja narzeczeńska lub dla par w domowym studiu fotograficznym na terenie Trojmiasta." 
               fill 
               priority 
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -363,7 +363,7 @@ export default function Offer() {
                 Sesja Narzeczeńska
               </h2>
               <p className="mb-6 max-w-sm text-white/80 font-light leading-relaxed text-[clamp(0.9rem,1.1vw,1rem)]">
-                Romantyczna sesja narzeczeńska to nie tylko piękne zdjęcia do zaproszeń ślubnych, ale przede wszystkim wspólna przygoda i celebracja Waszej miłości. Podczas spaceru w plenerze uchwycę chemię i bliskość, które czynią Waszą relację jedyną w swoim rodzaju. Wybierz sesję dla par, aby przeżyć niezapomniane chwile i zyskać naturalne fotografie pełne uczuć.
+                <strong>Sesja narzeczeńska i dla par</strong> w Trójmieście lub okolicach Wejherowa. Wybierzcie romantyczny spacer w plenerze lub naturalne ujęcia w moim <strong>studiu domowym</strong>. Jako fotograf par, uchwycę Waszą bliskość i emocje na autentycznych fotografiach, które idealnie dopełnią zaproszenia ślubne lub domowy album.
               </p>
 
               {/* Mobile Only Links */}

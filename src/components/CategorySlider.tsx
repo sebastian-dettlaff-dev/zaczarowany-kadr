@@ -1,10 +1,11 @@
 'use client'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import { useState} from 'react'
+import { useEffect, useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import {CldImage} from 'next-cloudinary';
 import { getCldImageUrl } from 'next-cloudinary'
+
 
 interface PortfolioImage {
   id:string;
@@ -16,6 +17,16 @@ interface PortfolioImage {
 
 export default function CategorySlider({ images }: { images: PortfolioImage[] }) {
   const [selectedImage ,setImage] = useState<PortfolioImage | null>(null);
+
+
+ useEffect(()=>{
+  if(selectedImage){
+    document.body.style.overflow = "hidden";
+  }else{
+    document.body.style.overflow = "unset";
+  }
+  return () => {document.body.style.overflow = "unset";}
+},[selectedImage]);
 
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start', 
@@ -59,7 +70,7 @@ export default function CategorySlider({ images }: { images: PortfolioImage[] })
                 animate={{opacity:1}}
                 exit={{opacity:0}}
                 onClick={() => setImage(null)}
-                className='fixed inset-0 flex justify-center items-center bg-black/30 backdrop-blur-md z-[100]'
+                className='fixed inset-0 w-screen h-screen flex justify-center items-center bg-black/30 backdrop-blur-md z-[100]'
                 >    
                 <button className="absolute top-10 right-10 text-4xl bg-transparent">&times;</button>
                 <motion.div

@@ -15,15 +15,15 @@ const PORTFOLIO_DATA = [
     images: [
       {
         id:"portfolio/sesje_rodzinne/chlopak-bawiacy-sie-w-lesie_uvgpio", 
-        alt:"Sesja rodzinna - chlopak-bawiacy-sie-w-lesie"
+        alt:"Sesja rodzinna - chlopak bawiacy sie w lesie"
       },
       {
         id:"portfolio/sesje_rodzinne/dziewczynka-siedzaca-na-drzewie_v8ezua", 
-        alt:"Sesja rodzinna - dziewczynka-siedzaca-na-drzewie."
+        alt:"Sesja rodzinna - dziewczynka siedzaca na drzewie."
       },
         {
         id:"portfolio/sesje_rodzinne/mama-z-synem-serce-dlonie_kikzwy", 
-        alt:"Matka z synkiem na sesji rodzinnej z sercem."
+        alt:"Matka z synkiem na sesji rodzinnej z sercem, pamiatka rodzinna."
       },
        {
         id:"portfolio/sesje_rodzinne/mama-z-synem_fsnfy7", 
@@ -31,7 +31,7 @@ const PORTFOLIO_DATA = [
       },
         {
         id:"portfolio/sesje_rodzinne/mama-z-synkiem-na-sesji_ahoxmx", 
-        alt:"Matka z dzieckiem na sesji rodzinnej w plenerze."
+        alt:"Matka z dzieckiem na sesji rodzinnej w plenerze, pamiatka rodzinna."
       },
           {
         id:"portfolio/sesje_rodzinne/mama-z-synkiem-szukajac-w-lesie_xzahua", 
@@ -47,7 +47,7 @@ const PORTFOLIO_DATA = [
       },
           {
         id:"portfolio/sesje_rodzinne/matka-z-synem-razem_vtm1l2", 
-        alt:"Matka z synkiem w lesie , razem spedzajac czas."
+        alt:"Matka z synkiem w lesie , razem spedzajac czas.Pamiatka rodzinna."
       },
           {
         id:"portfolio/sesje_rodzinne/matka-z-synkiem-bawiaca-sie-w-lesie_mz9vfm", 
@@ -105,27 +105,27 @@ const PORTFOLIO_DATA = [
     images: [
        {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_fotograficznej_profesjonalne_zdjecia_upvcs2",
-        alt:"kobieta_na_sesji_fotograficznej_profesjonalne_zdjecia"
+        alt:"kobieta na sesji fotograficznej profesjonalne zdjecia"
       },
        {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_w_domowym_studio_zrelaksowana_u_fotografa_ma1gh7",
-        alt:"portfolio/sesja_kobieca/kobieta_na_sesji_w_domowym_studio_zrelaksowana_u_fotografa"
+        alt:"kobieta na sesji w domowym studio fotograficzny, zrelaksowana i usmiechnieta."
       },
        {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_w_stusio_domowym_sesje_kobiece_x1vgay",
-        alt:"kobieta_na_sesji_w_stusio_domowym_sesje_kobiece"
+        alt:"Kobieta na sesji w studio domowym sesje kobiece"
       },
        {
         id:"portfolio/sesja_kobieca/kobieta_w_masce_na_sesji_pozuje_zmo4ie",
-        alt:"kobieta_w_masce_na_sesji_pozuje"
+        alt:"kobieta w masce pozuje na profesjonalnej sesji fotograficznej."
       },
        {
         id:"portfolio/sesja_kobieca/kobieta_z_talia_kart_sesja_fotograficzna_fx6ecj",
-        alt:"kobieta_z_talia_kart_sesja_fotograficzna"
+        alt:"kobieta z talia kart sesja fotograficzna"
       },
        {
         id:"portfolio/sesja_kobieca/kobieta_z_maska_sesja_foto_trojmiasto_v00oyr",
-        alt:"kobieta_z_maska_sesja_foto_trojmiasto"
+        alt:"kobieta z maska sesja foto trojmiasto"
       },
       {
         id:"portfolio/sesja_kobieca/bialo_czarne_zdjecie_kobiety_pozujacej_w_lesie_usmiechnieta_m1aexa",
@@ -137,79 +137,79 @@ const PORTFOLIO_DATA = [
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_w_masce_przebranie_sesja_kobieca_chap3j",
-        alt:"kobieta_w_masce_przebranie_sesja_kobieca"
+        alt:"kobieta w masce przebranie sesja kobieca"
       },
       {
         id:"portfolio/sesja_kobieca/dziewczyna_pozuje_na_sesji_foto_sc4yi4",
-        alt:"sesja_kobieca/dziewczyna_pozuje_na_sesji_foto_"
+        alt:"Sesja kobieca - dziewczyna pozuje na sesji foto."
       },
       {
         id:"portfolio/sesja_kobieca/dziewczyna_w_plenerze_na_sesji_okolice_male_trojmiasto_l3kxhz",
-        alt:"dziewczyna_w_plenerze_na_sesji_okolice_male_trojmiasto"
+        alt:"dziewczyna w plenerze na sesji okolice male trojmiasto"
       },
       {
         id:"portfolio/sesja_kobieca/kobieca_Sesja_w_plenerze_kobieta_idaca_po_ulicy_zabawa_zyezxh",
-        alt:"kobieca_Sesja_w_plenerze_kobieta_idaca_po_ulicy_zabawa"
+        alt:"Kobieca Sesja w plenerze kobieta idaca po ulicy zabawa w plenerze , profesjonalna fotografia na kaszubach!"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_lezaca_i_trzymajaca_bukiet_kwiatow_g4hcw6",
-        alt:"kobieta_lezaca_i_trzymajaca_bukiet_kwiatow"
+        alt:"Kobieta lezaca i trzymajaca bukiet kwiatow , studio fotograficzne w wejherowie"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_domowej_sfzldm",
-        alt:"kobieta_na_sesji_domowej"
+        alt:"kobieta na sesji domowej, fotografia w trojmiescie."
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_domowej_pozuje_na_krzesle_rtjb08",
-        alt:"/kobieta_na_sesji_domowej_pozuje_na_krzesle"
+        alt:"Kobieta na sesji domowej pozuje na krzesle, profesjonalna fotografia na Kaszubach."
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_fotograficznej_bialo_czarne_ujecie_qh6px6",
-        alt:"kobieta_na_sesji_fotograficznej_bialo_czarne_ujecie"
+        alt:"kobieta na sesji fotograficznej bialo-czarne ujecie."
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_fotograficznej_trzymajaca_kwiaty_eujypf",
-        alt:"kobieta_na_sesji_fotograficznej_trzymajaca_kwiaty"
+        alt:"kobieta na sesji fotograficznej trzymajaca kwiaty,pewnosc siebie w obiektywie"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_u_fotografa_w_wejherowie_fha9ne",
-        alt:"kobieta_na_sesji_u_fotografa_w_wejherowie"
+        alt:"Kobieta na sesji u fotografa w wejherowie"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_u_profesjonalnego_fotografa_w_domowym_studio_ra5ttd",
-        alt:"kobieta_na_sesji_u_profesjonalnego_fotografa_w_domowym_studio"
+        alt:"kobieta na sesji u profesjonalnego fotografa_w domowym studio"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_w_plenerze_b9kodp",
-        alt:"kobieta_na_sesji_w_plenerze"
+        alt:"kobieta_na_sesji_w_plenerze, okkolica trojmiasta."
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_nad_jeziorem_mokre_wlosy_wejherowo_asiqm7",
-        alt:"kobieta_nad_jeziorem_mokre_wlosy_wejherowo"
+        alt:"kobieta nad jeziorem mokre wlosy wejherowo"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_pozuje_na_sesji_pomorskie_v2gscl",
-        alt:"kobieta_pozuje_na_sesji_pomorskie"
+        alt:"kobieta pozuje na sesji pomorskie"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_skupiona_na_obiektywie_przyblizony_obiektyw_s8crh3",
-        alt:"kobieta_skupiona_na_obiektywie_przyblizony_obiektyw"
+        alt:"kobieta skupiona na obiektywie przyblizony obiektyw"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_trzymajaca_kwiaty_na_spacerze_x7dhm5",
-        alt:"kobieta_trzymajaca_kwiaty_na_spacerze"
+        alt:"kobieta trzymajaca kwiaty na spacerze"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_wianek_z_kwiatow_sesja_kobieca_ajb0mq",
-        alt:"kobieta_wianek_z_kwiatow_sesja_kobieca"
+        alt:"kobieta wianek z kwiatow sesja kobieca"
       },
       {
         id:"portfolio/sesja_kobieca/kobieta_z_kwiatami_na_polanie_na_sesji_kobiecej_cruhlw",
-        alt:"kobieta_z_kwiatami_na_polanie_na_sesji_kobiecej"
+        alt:"kobieta z kwiatami na polanie na sesji kobiecej"
       },
       {
         id:"portfolio/sesja_kobieca/sesja_portret_w_jeziorze_natura_fotograf_xt6owp",
-        alt:"sesja_portret_w_jeziorze_natura_fotograf"
+        alt:"sesja portret w jeziorze natura fotograf"
       },
      
     ]
@@ -219,7 +219,7 @@ const PORTFOLIO_DATA = [
     images: [
       {
         id:"portfolio/sesja_narzeczenska/i_said_yes_powiedzialam_tak_sesja_narzeczenska_qzscr1",
-        alt:"i_said_yes_powiedzialam_tak_sesja_narzeczenska"
+        alt:"I said yes powiedzialam tak sesja narzeczenska na Kaszubach."
       },
       {
         id:"portfolio/sesja_narzeczenska/narzeczeni_fotograf_uwobh0",
@@ -227,15 +227,15 @@ const PORTFOLIO_DATA = [
       },
       {
         id:"portfolio/sesja_fotograficzna/narzeczeni_love_fotograf_kadr_x53qua",
-        alt:"narzeczeni - love story - milosc w kadrze"
+        alt:"Narzeczeni - love story - milosc w kadrze"
       },
       {
         id:"portfolio/sesja_narzeczenska/pocalunek_sesja_fotograficzna_wejherowo_i_okolice_tfu0lw",
-        alt:"pocalunek_sesja_fotograficzna_wejherowo_i_okolice"
+        alt:"Pocalunek sesja fotograficzna wejherowo i okolice"
       },
       {
         id:"portfolio/sejsa_narzeczenska_pierscionek_zareczynowy_w_kadrze_mlrxgm",
-        alt:"sejsa_narzeczenska_pierscionek_zareczynowy_w_kadrze"
+        alt:"Sejsa narzeczenska pierscionek zareczynowy w kadrze"
       },
       {
         id:"portfolio/sesja_narzeczenska_jcs9st",
@@ -243,7 +243,7 @@ const PORTFOLIO_DATA = [
       },
       {
         id:"portfolio/sesja_narzeczenska_fajna_zabawa_pozowanie_n2fqar",
-        alt:"sesja_narzeczenska_fajna_zabawa_pozowanie"
+        alt:"sesja n0arzeczenska fajna zabawa pozowanie"
       },
       {
         id:"portfolio/sesja_narzeczenska_love_story_yi63n8",
@@ -309,16 +309,12 @@ const PORTFOLIO_DATA = [
         alt:"Sesja wizerunkowa kobiety w kosztuli."
       },
       {
-        id:"portfolio/sesja_wizerunkowa/kobieta_w_domu_na_sesji_fotograficznej_ztecq0",
-        alt:"kobieta_w_domu_na_sesji_fotograficznej"
-      },
-      {
         id:"portfolio/sesja_biznesowa/rozmyslajaca_kobieta_u_foto_r4tgqa",
-        alt:"Sesja biznesowa w domowym studio."
+        alt:"Sesja wizerunkowa w domowym studio w Wejherowie. Fotograf- Zaczarowany Kadr"
       },
       {
         id:"portfolio/sesja-wizerunkowa_mx554s",
-        alt:"Sesja wizerunkowa kobiety w trojmiescie."
+        alt:"Sesja wizerunkowa w domowym studio, kobieta pozujaca w studio domowym w Zaczarowany Kadr."
       },
       {
         id:"portfolio/sesja-wizerunkowa_linkedin_be8ui1",
@@ -327,35 +323,11 @@ const PORTFOLIO_DATA = [
       {
         id:"portfolio/sesja_wizerunkowa_fotograf_sbsxpl",
         alt:"Sesja wizerunkowa w obiektywie Zaczarowany Kadr."
-      },
-      {
-        id:"portfolio/sesja_wizerunkowa/kobieta_w_domu_na_sesji_fotograficznej_kiq86q",
-        alt:"Sesja wizerunkowa domowa."
-      },
-      {
-        id:"portfolio/sesja_wizerunkowa/rozmyslajaca_kobieta_u_foto_kgl6g3",
-        alt:"Sesja wizerunkowa w domowym studio w Wejherowie. Fotograf- Zaczarowany Kadr"
-      },
-      {
-        id:"portfolio/sesja-wizerunkowa_zxoaeh",
-        alt:"Sesja wizerunkowa w domowym studio, kobieta pozujaca w studio domowym w Zaczarowany Kadr."
-      },
-      {
-        id:"portfolio/sesja-wizerunkowa_linkedin_lagmo1",
-        alt:"Sesja wizerunkowa na Linkedin i social media."
-      },
-      {
-        id:"portfolio/sesja_biznesowa_w_domu_trojmiasto_tfbwtf",
-        alt:"Sesja biznesowa , idealna na linkedin i inne social media."
-      },
-      {
-        id:"portfolio/sesja_wizerunkowa_fotograf_ah5hdd",
-        alt:"Sesja wizerunkowa u fotografki w Zaczarowany Kadr."
       }
     ]
   },
   {
-    title:"sesje okolicznościowe",
+    title:"Sesje Okolicznościowe",
     images: [
       {
         id:"",

@@ -16,8 +16,7 @@ export default function Footer() {
 						{COMPANY_NAME}
 					</h3>
 					<p className='opacity-80 leading-relaxed'>
-						Fotografia retro w sercu Wejherowa. Uchwyćmy Twoje najważniejsze
-						chwile w ponadczasowym stylu.
+						Twoja fotografka w Wejherowie i Trójmieście. Realizuję naturalne sesje kobiece, ciążowe oraz rodzinne, łapiąc Wasze najpiękniejsze emocje. Zapraszam na wspólne zdjęcia w Wejherowie, Gdyni, Gdańsku i Sopocie.
 					</p>
 				</div>
 

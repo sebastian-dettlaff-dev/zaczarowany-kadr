@@ -18,39 +18,79 @@ interface CategoryItem {
 }
 
 
+
 const CATEGORY: CategoryItem[] = [
     {
-        title: "Sesja - wszystko co musisz wiedziec",
+        title: "Sesja – wszystko co musisz wiedzieć",
         description: "Chwila oddechu tylko dla Ciebie.",
         image: "/assets/images/pexels-samuel-walker-15032-569098.jpg",
         faq: [
-            { question: "Ile zwykle trwa sesja?", answer: "Zazwyczaj około 2 godzin w plenerze." },
-            { question: "Czy sesje odbywaja sie w studio?", answer:"Nie posiadam studia, sesje odbywaja sie glownie w moim domowym studio , plenerze lub u Panstwa w domu.Z checia dojade do Panstwa (do 30km dojazd GRATIS)"},
-            { question: "Jak się ubrać?", answer: "Najlepiej w coś wygodnego, powininnas/powinienes dobrac ubrania do radzaju sesji na ile to mozliwe." },
-            { question: "Czy na sesje musze umowic sie z duzym wyprzedzeniem?", answer: "W zimowe miesiace latwiej znajduje terminy dla Panstwa natomiast w pozostale prosze o rezerwacje sesji z najwiekszym mozliwym wyprzedzeniem , szczegolnie w przypadku sesji/imprez okolicznosciowych np. Chrzciny, Wesele itp" },
-            {question:"Jak wyglada sesja?", answer:"Przede wszystkim jest to dobra zabawa.Im naturalniej , tym lepiej.Sesja to czas zebyscie pokazali siebie, swoj charakter , usmiech i dobra energie. Bawcie sie!"},
-            {question:"Kiedy otrzymam zdjecia po obrobce?",answer:"Gotowe zdjecia , staram sie przekazac w ciagu 2 tygodni od terminu sesji,natomiast przy wielu zleceniach termin ten moze przedluzyc sie o kilka dni (rzadko) , o czym napewno Panstwa poinformuje."},
-            {question:"W jakiej formie otrzymam zdjecia?" , answer:"Zjecia przekazuje wylacznie w formie elektronicznej , jezeli zycza sobie Panstwo inna forme prosze o informacje przed sesja."},
-            {question:"Co zawiera cena sesji fotograficznej?" , answer:"czas spedzony na edycji zdjec , konsultacje przed sesja , dojazd do klienta (do 30km GRATIS)"},
-            {question:"Czy moge przelozyc termin sesji ?", answer:"W przypadku sytuacji losowej ,  znajde Panstwu inny dogodny termin.Prosze jednak , o nie naduzywanie tego."}
-           
-
+            { 
+                question: "Ile trwa sesja?", 
+                answer: "Czas trwania sesji zależy od wybranego pakietu. Szczegółowe informacje znajdziesz w zakładce Cennik." 
+            },
+            { 
+                question: "Czy sesje odbywają się w studio?", 
+                answer: "Nie posiadam stacjonarnego studia. Sesje realizuję w plenerze, w moim domowym studio lub u Ciebie w domu. Jeśli jednak marzy Ci się sesja w wynajętym studio, nie ma problemu – wszystko ogarniemy, a koszt wynajmu jest po stronie klienta. Dojazd do 30 km gratis."
+            },
+            { 
+                question: "Jak się ubrać na sesję?", 
+                answer: "Najważniejsze – czuj się sobą i komfortowo. Chętnie podpowiem stylizacje dopasowane do rodzaju sesji i klimatu zdjęć." 
+            },
+            { 
+                question: "Czy muszę rezerwować termin z dużym wyprzedzeniem?", 
+                answer: "Zimą terminy są zwykle łatwiej dostępne. W sezonie (wiosna-lato) warto rezerwować sesję z małym wyprzedzeniem, szczególnie przy wydarzeniach okolicznościowych (chrzty, wesela itp.)." 
+            },
+            {
+                question: "Jak wygląda sesja?", 
+                answer: "Na luzie, bez stresu i sztywnych poz. Im naturalniej, tym lepiej – śmiech, emocje i dobra energia są mile widziane. Ja poprowadzę Cię krok po kroku."
+            },
+            {
+                question: "Kiedy otrzymam gotowe zdjęcia?",
+                answer: "Gotowe fotografie przekazuję zazwyczaj do 12 dni od sesji. Dostęp do galerii online masz do 2 dni od zakończenia sesji. Czas obróbki liczony jest od momentu wyboru zdjęć. W wyjątkowych sytuacjach termin może się minimalnie wydłużyć – zawsze daję znać."
+            },
+            {
+                question: "W jakiej formie otrzymam zdjęcia?", 
+                answer: "Zdjęcia przekazuję elektronicznie. Jeśli marzy Ci się inna forma (np. odbitki), daj znać przed sesją."
+            },
+            {
+                question: "Co zawiera cena sesji?", 
+                answer: "Cena obejmuje: czas poświęcony na sesję, obróbkę zdjęć, konsultację przed sesją oraz dojazd do 30 km (gratis)."
+            },
+            {
+                question: "Czy mogę przełożyć termin sesji?", 
+                answer: "Jeśli zdarzy się coś losowego – oczywiście, znajdziemy inny termin. Proszę tylko, aby nie robić tego zbyt często. Sesję można przełożyć maksymalnie 2-krotnie. Jeśli nie zjawisz się na sesji, zaliczka nie jest zwracana."
+            }
         ]
     },
     {
-        title: "Platnosci i rozliczenia - od A do Z",
-        description:"Dostosuj budzet do swoich potrzeb.",
-        image: "/assets/images/pexels-samuel-walker-15032-569098.jpg",
+        title: "Płatności i rozliczenia – od A do Z",
+        description: "Dostosuj budżet do swoich potrzeb.",
+        image: "/assets/images/aparat-background.webp",
         faq: [
-            { question: "Czy makijaż jest w cenie?", answer: "Współpracuję z wizażystką, to opcja dodatkowa." },
-            { question: "Ile zdjęć otrzymam?", answer: "Ilosc zdjec ktora Panstwo otrzymacie zalezna jest od pakietu na ktory sie Panstwo zdecyduja.Oferuje trzy pakiety (MINI , STANDARD ORAZ PREMIUM).Szczegoly dostepne sa w sekcj '\cennik'." },
-             { question: "Kiedy rozliczamy sie z zarezerwowanej sesji?", answer: "Przed sesja nalezy wplacic zaliczke na poczet zarezerwowanej sesji w wysokosci 50zl." },
-             {question:"Czy dostepne sa jakies rabaty?",answer:"Co pare tygodni oferujemy cykliczne znizki na wybrane sesje. Prosze na biezaco sprawdzac moje Social Media."},
-              {question:"Co jesli sesja sie przedluzy i zdecyduje sie na kilka dodatkowych zdjec?",answer:"Kazda dodatkowa rozpoczeta godzina o koszt 150zl."}
+            { 
+                question: "Czy makijaż jest w cenie?", 
+                answer: "Makijaż nie jest wliczony w cenę sesji. Współpracuję z zaufaną wizażystką – jeśli chcesz, możesz skorzystać z tej opcji dodatkowo." 
+            },
+            { 
+                question: "Ile zdjęć otrzymam?", 
+                answer: "Liczba zdjęć zależy od wybranego pakietu. Do wyboru są trzy opcje: MINI, STANDARD i PREMIUM – szczegóły znajdziesz w zakładce Cennik." 
+            },
+            { 
+                question: "Kiedy i jak się rozliczamy za sesję?", 
+                answer: "Aby zarezerwować termin, potrzebna jest zaliczka w wysokości 50 zł. Resztę rozliczamy po sesji." 
+            },
+            {
+                question: "Czy są jakieś rabaty?",
+                answer: "Tak! Co jakiś czas pojawiają się promocje na wybrane sesje. Najlepiej zaglądać na moje social media – tam wrzucam wszystkie aktualności."
+            },
+            {
+                question: "Co jeśli zdecyduję się na więcej zdjęć?",
+                answer: "Jeśli podczas sesji złapiemy flow i będziesz mieć ochotę na więcej – super! Dodatkowe ujęcia można dokupić po sesji, wybierając je w galerii online."
+            }
         ]
     }
 ];
-
 export default function FaqPage() {
     // Stan przechowujący indeks rozwiniętej karty. Null oznacza, że żadna nie jest rozwinięta.
     const [openIndex, setOpenIndex] = useState<number | null>(null);

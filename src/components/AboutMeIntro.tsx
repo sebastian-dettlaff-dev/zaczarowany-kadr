@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 export default function AboutMeIntro() {
 	return (
 		<>
@@ -29,79 +30,47 @@ export default function AboutMeIntro() {
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 -rotate-6 translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/assets/images/fotograf-zaczarowanykadr.jpg' // Zmień na ścieżkę do Twojego zdjęcia
-									alt='Sesja rodzinna'
+									src='/assets/images/fotograf-zaczarowanykadr.jpg' 
+									alt='Fotografka Klaudia z usmiechem zajmujaca sie swoja praca w domowym studio.'
 									fill
-									className='object-cover'
+									className='object-cover object-top'
 									priority
 								/>
 							</div>
-							<p className='mt-4 text-center leading-snug'>
-								Sesja rodzinna
-							</p>
+							<p className='pt-4'></p>
 						</div>
 
-						{/* KARTA POLAROID 2 */}
+						{/*  POLAROID 2 */}
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 rotate-12 -translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/assets/images/fotograf__trojmiescie_klaudia_zaczarowany_kadr.webp' // Zmień na ścieżkę do Twojego zdjęcia
-									alt='Piękne chwile'
+									src='/assets/images/fotograf__trojmiescie_klaudia_zaczarowany_kadr.webp' 
+									alt='Zdjecie fotografki podczas sesji.'
 									fill
 									className='object-cover'
 									priority
 								/>
 							</div>
-							<p className='mt-4 text-center  leading-snug'>
-								Chwile piękne
-							</p>
+							<p className='pt-4'></p>
 						</div>
-						{/* KARTA POLAROID 3 */}
+						{/*  POLAROID 3 */}
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 rotate-12 -translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/assets/images/fotograf_domowy_i_plenerowy_na_kaszubach.webp' // Zmień na ścieżkę do Twojego zdjęcia
-									alt='Piękne chwile'
+									src='/assets/images/fotograf_wejherowo_i_okolice_profesjonalna_fotografia.webp' // Zmień na ścieżkę do Twojego zdjęcia
+									alt='Zdjecie fotografki w czasie pracy z aparatem fotograficznym , w swoim profesjonalnym studio domowym w Wejherowie.'
 									fill
-									className='object-cover'
+									className='object-cover object-top'
 									priority
 								/>
 							</div>
-							<p className='mt-4 text-center  leading-snug'>
-								Chwile piękne
-							</p>
+							<p className='pt-4'></p>
 						</div>
-						{/* KARTA POLAROID 2 */}
-						{/* <div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 rotate-12 -translate-y-4 hover:rotate-0 transition-transform duration-300'>
-							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
-								<Image
-									src='/chwile-piekne.jpg' // Zmień na ścieżkę do Twojego zdjęcia
-									alt='Piękne chwile'
-									fill
-									className='object-cover'
-									priority
-								/>
-							</div>
-							<p className='mt-4 text-center   leading-snug'>
-								Chwile piękne
-							</p>
-						</div> */}
-
-						{/* Możesz dodać więcej polaroidów, kopiując powyższe bloki */}
+						
 					</div>
-					{/* <div className='block md:hidden w-full'>
-            <div className='relative aspect-[3/4] w-full max-w-[300px] mx-auto border-[12px] border-white shadow-lg rotate-2'>
-                <Image 
-                    src='/assets/images/twoje-glowne.jpg' 
-                    fill 
-                    className='object-cover' 
-                    alt='Klaudia - fotograf'
-                />
-                <div className='absolute bottom-2 right-2 text-[10px] text-gray-400 font-mono'>FRAME #01</div>
-            </div>
-        </div> */}
+			
 
-					{/* PRAWA STRONA: TEKST "O MNIE" */}
+					
 					<div className='w-full md:w-1/2 space-y-6 text-center md:text-left'>
 					
 						<h2 className='text-4xl md:text-3xl font-bold mt-4 p-2'>
@@ -121,10 +90,15 @@ export default function AboutMeIntro() {
                         <p className='leading-relaxed font-medium'>
                             Dojazd na terenie Wejherowa i okolic masz u mnie w prezencie! 
                         </p>
+						<p className='leading-relaxed font-medium'>
+                            Do zobaczenia na Sesji! 
+                        </p>
                     </div>
-						<button className='  px-8 py-3 rounded-full transition-colors cursor-pointer'>
+						{/* <button className='  px-8 py-3 rounded-full transition-colors cursor-pointer'>
 							Poznaj moje portfolio
-						</button>
+						</button> */}
+						<Link href="/portfolio" className="inline-block bg-white text-black px-8 py-3 rounded-full font-medium hover:scale-95 
+						hover:bg-gray-200 transition-colors shadow-lg">Poznaj moje portfolio</Link>
 					</div>
 				</div>
 			</section>

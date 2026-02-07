@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond, Montserrat, Space_Mono } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/components/Navbar"; 
 import Footer from "@/components/Footer"; 
 import { COMPANY_NAME } from "@/lib/constants";
 import { get } from "http";
 import { getSchemaDataJSONLD } from "@/lib/jsonLd";
 import FloatingActionButton from "@/components/FloatingActionButton";
+import CookiesBanner from "@/components/CookiesBanner";
+import "./globals.css";
 // FONTS
 const serif = Cormorant_Garamond({
 subsets: ["latin-ext"],
@@ -80,12 +81,13 @@ export default function RootLayout({
         <Navbar />
         {/* 2. MAIN - Wypychacz. flex-grow sprawi, że zajmie całe wolne miejsce, 
             nawet jeśli children będzie puste. pt-20 tworzy lukę na fixed navbar.  md:pt-17.5 pt-17*/}
-        <main className={`${serif.variable} ${sans.variable} ${mono.variable} flex-grow  w-full overflow-x-hidden  bg-white  `}>
+        <main className={`${serif.variable} ${sans.variable} ${mono.variable} flex-grow  w-full overflow-x-hidden bg-white`}>
           {children}
         </main>
         <FloatingActionButton />
         {/* 3. FOOTER */}
         <Footer />
+        <CookiesBanner />
       </body>
     </html>
   );

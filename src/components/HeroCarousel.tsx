@@ -19,8 +19,8 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    title: "Sesje w Twoim Domu",
-    description: "Pełna swoboda i komfort. Przyjadę do Ciebie z całym sprzętem.",
+    title: "Sesje rodzinne w Twoim domu",
+    description: "Komfortowa sesja lifestyle w Wejherowie i okolicach. Przyjadę do Was ( z całym sprzętem), by uchwycić naturalne chwile w domowym zaciszu.",
     image: "/assets/images/home-session.jpg", // upewnij się, że masz te pliki w public/images/
     buttonText: "Sprawdź ofertę",
     link: "/oferta"
@@ -28,15 +28,15 @@ const SLIDES: Slide[] = [
   {
     id: 2,
     title: "Naturalne Sesje Plenerowe",
-    description: "Uchwyćmy emocje w świetle zachodzącego słońca.",
+    description: "Wyjątkowe sesje zdjęciowe w plenerach Trójmiasta. Uchwyćmy Wasze emocje w świetle zachodzącego słońca na plaży lub w lesie.",
     image: "/assets/images/plener.jpg",
     buttonText: "Zobacz portfolio",
     link: "/portfolio"
   },
   {
     id: 3,
-    title: "Konkurencyjne Ceny",
-    description: "Profesjonalna jakość dostępna dla każdego. Sprawdź pakiety.",
+    title: "Fotograf – Cennik i Pakiety",
+    description: "Profesjonalne sesje rodzinne i prezentowe w przystępnej cenie. Sprawdź pakiety z dostępem do galerii online.",
     image: "/assets/images/cheapy.jpg",
     buttonText: "Cennik",
     link: "/cennik"
@@ -48,7 +48,7 @@ export default function HeroCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })])
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[100vh] bg-gray-100 overflow-hidden" ref={emblaRef}>
+    <section className="relative w-full h-[80vh] md:h-[100vh] bg-gray-100 overflow-hidden" ref={emblaRef}>
       <div className="flex h-full">
         {SLIDES.map((slide, index) => (
           <div key={slide.id} className="relative flex-[0_0_100%] min-w-0 h-full">
