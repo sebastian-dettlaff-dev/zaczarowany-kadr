@@ -32,6 +32,7 @@ export default function StepEighth({formData,  updateField,onComplete }: StepEig
       </div>
       {formData.message.length > 4 && (
                     <button 
+                    aria-label="Wyślij zapytanie"
                         onClick={handleFinalClick}
                         disabled={isSending}
                         className="p-4 bg-cyan-500 text-black font-bold rounded-xl animate-pulse text-[10px] tracking-[0.2em]"

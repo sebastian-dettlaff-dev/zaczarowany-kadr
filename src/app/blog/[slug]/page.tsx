@@ -7,6 +7,9 @@ import { notFound } from "next/navigation";
 // Importujemy typ dla treści z Sanity
 import { PortableTextBlock } from "sanity"; 
 import { Metadata } from "next";
+import { COMPANY_NAME } from "@/lib/constants";
+
+
 
 interface Post {
   title: string;
@@ -55,14 +58,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) {
     return {
       title: "Artykuł nie znaleziony",
+      robots: {
+        index:false,
+        follow: false
+      }
     };
   }
+  const url = `https://zaczarowanykadr.pl/blog/$[slug]`;
+const  ogImage = post.mainImage ? urlFor(post.mainImage).url() : "https://zaczarowanykadr.pl/logo.png";
+const isoDate = new Date(post.publishedAt).toISOString();
 
   return {
-    title: `${post.title} | Zaczarowany Kadr`, 
-    description: "Przeczytaj nasz najnowszy wpis na blogu.", // Możesz dodać pole 'description' w Sanity, żeby tu wstawiać skrót
+    title: `${post.title}`, 
+    description: "Przeczytaj nasz najnowszy wpis na blogu.Dowiedz się więcej o fotografii, inspiracjach i kulisach sesji zdjęciowych z Zaczarowanym Kadrem.", 
+      alternates: {
+      canonical: `/blog/${slug}`, 
+    },
+    
     openGraph: {
-      images: post.mainImage ? [urlFor(post.mainImage).url()] : [], // To zdjęcie pokaże się na Facebooku/LinkedIn
+      title: post.title,
+      description: "Przeczytaj nasz najnowszy wpis na blogu.Dowiedz się więcej o fotografii, inspiracjach i kulisach sesji zdjęciowych z Zaczarowanym Kadrem.",
+      type: 'article',
+      url:url,
+      publishedTime: isoDate,
+      images:ogImage? [
+        {
+          url: ogImage, 
+          width: 1200,
+          height: 630,
+          alt: `${post.title} - ${COMPANY_NAME}`,
+        },
+      ]:[],
     },
   };
 }
@@ -75,9 +101,46 @@ export default async function SinglePostPage({ params }: { params: Promise<{ slu
   if (!post) {
     return notFound();
   }
+  const articleSchema = (post: Post, slug: string) => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": `https://zaczarowanykadr.pl/blog/${slug}/#article`,
+      "headline": post.title,
+      "datePublished": post.publishedAt,
+      
+          "author": {
+            "@type": "Person",
+            "name": "Klaudia",
+            "url": "https://zaczarowanykadr.pl/"
+          }
+      ,
+      "image": post.mainImage ? urlFor(post.mainImage).url() : "https://zaczarowanykadr.pl/logo.png",
+      "publisher": { "@id": "https://zaczarowanykadr.pl/#business" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://zaczarowanykadr.pl/blog/${slug}/#webpage`
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `https://zaczarowanykadr.pl/blog/${slug}/#breadcrumb`,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://zaczarowanykadr.pl" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zaczarowanykadr.pl/blog" },
+        { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://zaczarowanykadr.pl/blog/${slug}` }
+      ]
+    }
+  ]
+});
 
   return (
-    <article className="max-w-5xl mx-auto px-4 py-24">
+    <article aria-label="Artykul" className="max-w-5xl mx-auto px-4 py-24">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema(post, slug)) }}
+/>
       {/* <header className="mb-10 mt-10">
           <h1 className="text-center text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           {post.title}

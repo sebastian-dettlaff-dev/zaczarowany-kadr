@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { COMPANY_NAME } from '@/lib/constants';
 interface plan_Details{
     price:string;
     name: string;
@@ -14,7 +15,51 @@ const price_Plans:plan_Details[] =[
     {price:"550 PLN",  name:"PREMIUM",description:"Pakiet ten zawiera 35 zdjec do wybrou (Kazde dodatkowe ujecie 20 PLN).Czas trwania sesji to 60 minut do maksymalnie 2 godzin - bez roznicy na rodzaj sesji.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:""},
     ]
 
-
+export const pricePlanPageSchemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://zaczarowanykadr.pl/#business",
+      "name": `${COMPANY_NAME}`
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://zaczarowanykadr.pl/cennik/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona Główna",
+          "item": "https://zaczarowanykadr.pl"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cennik",
+          "item": "https://zaczarowanykadr.pl/cennik" // upewnij się, że URL jest poprawny
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Pakiety Fotograficzne",
+      "offeredBy": { "@id": "https://zaczarowanykadr.pl/#business" },
+      "itemListElement": price_Plans.map((plan, index) => ({
+        "@type": "Offer",
+        "position": index + 1,
+        "itemOffered": {
+          "@type": "Service",
+          "name": `Pakiet ${plan.name}`,
+          "description": plan.description
+        },
+        "price": plan.price.replace(/[^0-9]/g, ""), // wyciągamy samą liczbę
+        "priceCurrency": "PLN",
+        "availability": "https://schema.org/PreOrder" // oznacza usługę na miejscu
+      }))
+    }
+  ]
+}
 export default function PricePlan(){
     return(
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-2 md:p-10">
@@ -57,7 +102,7 @@ export default function PricePlan(){
             <p className="p-3 text-retro-grey text-center text-sm font-light leading-relaxed">
                {price_Plan.description}
             </p>
-            <Link href="/kontakt"className="mt-auto p-3 mt-4 bg-retro-accent text-white hover:bg-white hover:text-retro-accent shadow-sm hover:shadow-md hover:scale-95">Zarezerwuj
+            <Link aria-label='Zarezerwuj sesje' href="/kontakt"className="mt-auto p-3 mt-4 bg-retro-accent text-white hover:bg-white hover:text-retro-accent shadow-sm hover:shadow-md hover:scale-95">Zarezerwuj
             </Link>
          
           </div>

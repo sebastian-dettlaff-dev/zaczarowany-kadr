@@ -3,17 +3,108 @@ import { Cormorant_Garamond, Montserrat, Space_Mono } from 'next/font/google';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { COMPANY_NAME } from '@/lib/constants';
+
 
 // Metadata for servises page
 export const metadata: Metadata = {
-  title: 'Oferta Sesji', // Next automatycznie zamieni to na "Oferta Sesji | Zaczarowany Kadr"
-  description: 'Sprawdź rodzaje sesji: plener, domowe studio , rodzinne oraz indywidualne , okolicznosciowe i narzeczenskie.A moze kobiece lub wizerunkowe.Dostosuje sie do ciebie!',
-  //You don;t need openGraph here as it's inherited from layout.tsx
-//   You need only schema data JSON-LD if it's different from the main page - so only specific services offered on this page
+  title: 'Oferta Sesji Fotograficznych', // Wynik: Oferta Sesji Fotograficznych | Zaczarowany Kadr
+  description: 'Fotograf Wejherowo: sesje rodzinne, kobiece, okolicznościowe i inne na Kaszubach. Poznaj moją ofertę i zarezerwuj termin. Zapraszam do Zaczarowanego Kadru!',
+  alternates: {
+    canonical: '/oferta',
+  },
 };
+
+// schema data JSON-LD for robots to understand the offers
+export const offerSchema = {
+  "@context": "schema.org",
+  "@graph":[
+    {
+      "@type": "LocalBusiness",
+      "@id":"https://zaczarowanykadr.pl/#business"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": `Pełna Oferta Sesji - ${COMPANY_NAME} Wejherowo`,
+      "description": "Szczegółowa oferta usług fotograficznych w Wejherowie i okolicach.",
+      "offerBy": {"@id":"https://zaczarowanykadr.pl/#business"},
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+          "@type": "Service",
+          "name": "Sesja Rodzinna",
+          "description": "Naturalna sesja rodzinna w Wejherowie. W domu lub plenerze uwiecznię Wasze autentyczne emocje.",
+          "url": "https://zaczarowanykadr.pl/oferta"
+    }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+          "@type": "Service",
+          "name": "Sesja Kobieca",
+          "description": "Zmysłowa sesja kobieca w Wejherowie. Nie musisz potrafić pozować – pomogę Ci poczuć się swobodnie przed obiektywem.", 
+          "url": "https://zaczarowanykadr.pl/oferta"
+    }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+          "@type": "Service",
+          "name": "Sesja Okolicznościowa",
+          "description": "Fotografia okolicznościowa w Małym Trójmieście i na Kaszubach. Reportaż z chrztu, komunii czy jubileuszu. Profesjonalna pamiątka rodzinna.Galeria zdjec online.",
+          "url": "https://zaczarowanykadr.pl/oferta"
+    }   
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+          "@type": "Service",
+          "name": "Sesja Narzeczeńska",
+          "description": "Romantyczne sesje dla par i narzeczonych w plenerze lub studio.",
+          "url": "https://zaczarowanykadr.pl/oferta"
+    }   
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sesja Wizerunkowa",
+            "description": "Zdjęcia biznesowe i wizerunkowe dla profesjonalistów i marek osobistych.",
+            "url": "https://zaczarowanykadr.pl/oferta"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sesja Ciążowa i Noworodkowa",
+            "description": "Czułe kadry brzuszkowe i pierwsze chwile maluszka w domowym studiu.",
+            "url": "https://zaczarowanykadr.pl/oferta"
+          }
+        }
+  ]
+    }
+
+  ]
+}
+
+
+
+
+  
+
+
+
+
 export default function Offer() {
   return (
-    <main className="py-20 px-2 md:px-6">
+    <main aria-label='Oferta dla Was' className="py-20 px-2 md:px-6">
+            	{/* Skrypt Schema JSON-LD for robots to understand the offers */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+			/>
       <div className="max-w-6xl mx-auto">
           <div className="md:hidden block text-center mb-16 mt-16">
                     <span className="text-retro-orange uppercase tracking-[0.3em] text-xs font-bold">Twoja wymarzona sesja w miłej atmosferze.</span>

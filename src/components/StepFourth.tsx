@@ -18,6 +18,7 @@ export default function StepFourth({ nextStep, formData}: StepFourthProps) {
       <div className="flex flex-col gap-3">
         {slots.map((slot) => (
           <button
+            aria-label='Wybierz slot czasowy'
             key={slot}
             onClick={() => nextStep('timeSlot', slot)} 
             className="flex-1 border border-white/20 bg-white/5 py-6 px-4 rounded-xl text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white/10 hover:border-white/40 transition-all duration-300 group"

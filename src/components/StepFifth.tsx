@@ -22,6 +22,7 @@ export default function StepFifth({ nextStep, formData, updateField }: StepFifth
       </div>
       {formData.name.length > 4 && (
                     <button 
+                    aria-label="Potwierdź imię i nazwisko"
                         onClick={() => nextStep('name', formData.name)} 
                         className="p-4 bg-cyan-500 text-black font-bold rounded-xl animate-pulse text-[10px] tracking-[0.2em]"
                     >

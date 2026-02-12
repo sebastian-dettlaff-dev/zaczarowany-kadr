@@ -27,7 +27,8 @@ export default function Footer() {
 					</h4>
 					<ul className='flex flex-col gap-2'>
 						<li>
-							<Link
+							<Link 
+								aria-label='Strona glowna'
 								href='/'
 								className='hover:text-retro-orange transition'
 							>
@@ -36,6 +37,7 @@ export default function Footer() {
 						</li>
 						<li>
 							<Link
+								aria-label='Zobacz moje portfolio'
 								href='/portfolio'
 								className='hover:text-retro-orange transition'
 							>
@@ -45,6 +47,7 @@ export default function Footer() {
 					
 						<li>
 							<Link
+								aria-label='Zobacz moja oferte'
 								href='/oferta'
 								className='hover:text-retro-orange transition '
 							>
@@ -52,21 +55,31 @@ export default function Footer() {
 							</Link>
 						</li>
 						<li>
-							<Link href='/blog' className='hover:text-retro-orange transition'>
+							<Link aria-label='Zobacz moj blog' href='/blog' className='hover:text-retro-orange transition'>
 								Blog
 							</Link>
 						</li>
 						<li>
-							<Link href='/faq' className='hover:text-retro-orange transition'>
+							<Link aria-label='Zobacz FAQ' href='/faq' className='hover:text-retro-orange transition'>
 								FAQ
 							</Link>
 						</li>
 						<li>
 							<Link
+								aria-label='Zobacz cennik'
 								href='/cennik'
 								className='hover:text-retro-orange transition'
 							>
 								Cennik
+							</Link>
+						</li>
+								<li>
+							<Link
+								aria-label='Zobacz polityke prywatnosci'
+								href='/polityka'
+								className='hover:text-retro-orange transition'
+							>
+								Polityka Prywatności
 							</Link>
 						</li>
 						
@@ -81,19 +94,19 @@ export default function Footer() {
 					<ul className='flex flex-col gap-2 text-sm italic'>
 						<li className='whitespace-nowrap'>
 							<span className='inline-flex'>
-								<MapPin size={20} className='text-retro-orange shrink-0 m-1' />
+								<MapPin aria-label='Lokalizacja Wejherowo' size={20} className='text-retro-orange shrink-0 m-1' />
 								Wejherowo, Pomorskie
 							</span>
 						</li>
 						<li className='whitespace-nowrap'>
 							<span className='inline-flex'>
-								<Phone size={20} className='text-retro-orange shrink-0 m-1' />
+								<Phone aria-label='Numer kontaktowy' size={20} className='text-retro-orange shrink-0 m-1' />
 								<a href='tel:+ 48 790 491 067'>{COMPANY_PHONE}</a>
 							</span>
 						</li>
 						<li className='break-all text-xs sm:text-sm italic opacity-80'>
 							<span className='inline-flex'>
-								<Mail size={20} className='text-retro-orange shrink-0 m-1' />
+								<Mail aria-label='Adres e-mail kontaktowy' size={20} className='text-retro-orange shrink-0 m-1' />
 								<a href='mailto:kontakt@zaczarowanykadr.pl'>
 									kontakt@zaczarowanykadr.pl
 								</a>
@@ -106,7 +119,7 @@ export default function Footer() {
 				<div className='flex-1 min-w-[140px]'>
 					<h4 className='font-bold mb-4 uppercase tracking-widest  text-retro-orange'>
 						Social Media
-						<SocialMedia />
+						<SocialMedia aria-label='Linki do social mediów' />
 					</h4>
 				</div>
 				<div className='flex-1 min-w-[140px]'>
@@ -120,6 +133,18 @@ export default function Footer() {
 			<div className='max-w-6xl mx-auto mt-12 pt-6 border-t border-retro-grey/30 text-center text-xs opacity-50'>
 				© {new Date().getFullYear()} {COMPANY_NAME}. Wszystkie prawa
 				zastrzeżone.
+				<div className="mt-2 tracking-widest uppercase">
+        Designed & Developed with by 
+        <a 
+			aria-label='Link do portfolio autora'
+            href="https://github.com/CaptainSmile1" // Może być link do GitHub, LinkedIn lub portfolio
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-retro-orange transition-colors ml-1 underline-offset-4 font-bold text-sm"
+        >
+            Sebastian Dettlaff
+        </a>
+    </div>
 			</div>
 		</footer>
 	);

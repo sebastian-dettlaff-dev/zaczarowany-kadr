@@ -1,21 +1,24 @@
-"use client"; 
+// "use client"; 
 
-import Image from 'next/image';
-import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+// import Image from 'next/image';
+// import { useState } from 'react';
+// import { ChevronDown } from 'lucide-react';
+import { Metadata } from 'next';
+import FaqList from '@/components/FaqList';
+import { CategoryItem } from '@/components/FaqList';    
 
 
-interface FaqItem {
-    question: string;
-    answer: string;
-}
+// interface FaqItem {
+//     question: string;
+//     answer: string;
+// }
 
-interface CategoryItem {
-    title: string;
-    description: string;
-    image: string;
-    faq: FaqItem[];
-}
+// interface CategoryItem {
+//     title: string;
+//     description: string;
+//     image: string;
+//     faq: FaqItem[];
+// }
 
 
 
@@ -91,92 +94,55 @@ const CATEGORY: CategoryItem[] = [
         ]
     }
 ];
+const allFaqItems = CATEGORY.flatMap(category => category.faq)
+
+
+export const metadata: Metadata = {
+  title: 'FAQ - Najczęstsze pytania | Zaczarowany Kadr',
+  description: 'Masz pytania dotyczące sesji? Dowiedz się, jak się przygotować, ile trwa sesja, jak ubrać się oraz jak wyglądają płatności. Odpowiedzi od A do Z.',
+//   for social media and SEO
+  openGraph: {
+    title: 'FAQ - Wszystko co musisz wiedzieć o sesji | Zaczarowany Kadr',
+    description: 'Przygotowanie do sesji, cennik, terminy i logistyka. Sprawdź odpowiedzi na najczęściej zadawane pytania.',
+    url: '/faq', // Warto dodać też tutaj pełny link
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/faq', 
+  },
+};
+export const  faqPageSchemaData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": allFaqItems.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
 export default function FaqPage() {
     // Stan przechowujący indeks rozwiniętej karty. Null oznacza, że żadna nie jest rozwinięta.
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    // const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const toggleOpen = (index: number) => {
-        // Jeśli klikniemy w już otwartą, zamykamy ją (null). Jeśli w inną, otwieramy nową.
-        setOpenIndex(openIndex === index ? null : index);
-    };
+    // const toggleOpen = (index: number) => {
+    //     // Jeśli klikniemy w już otwartą, zamykamy ją (null). Jeśli w inną, otwieramy nową.
+    //     setOpenIndex(openIndex === index ? null : index);
+    // };
 
     return (
-        <section className="py-24 px-4">
+        
+        <section aria-label='Najczesciej zadawane pytania' className="py-24 px-4">
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchemaData) }} />
             <div className="h-auto">
                 <div>
                     <h1 className="text-center text-3xl text-retro-accent p-4 mb-8">
                         Pierwszy raz na sesji? Dowiedz się wszystkiego!
                     </h1>
                 </div>
-
-                <div className="max-w-6xl mx-auto flex flex-col gap-6 justify-center items-center">
-                    {CATEGORY.map((category, index) => {
-                        const isOpen = openIndex === index;
-
-                        return (
-                            <div
-                                key={index}
-                                onClick={() => toggleOpen(index)}
-                                // ZMIANA: Zamiast sztywnego h-[300px], używamy min-h i h-auto.
-                                // Dodajemy transition-all dla płynności.
-                                className={`
-                                    w-full border border-white/20 rounded-sm cursor-pointer overflow-hidden transition-all duration-300 ease-in-out
-                                    ${isOpen ? 'shadow-lg  ' : 'shadow-sm'}
-                                `}
-                            >
-                                {/* Górna część: Obrazek + Tytuł (zawsze widoczne) */}
-                                <div className="flex flex-col md:flex-row">
-                                    {/* Obrazek - na mobile góra, na desktopie po lewej */}
-                                    <div className="relative w-full md:w-1/3 h-[200px]">
-                                        <Image
-                                            src={category.image}
-                                            alt={category.title}
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 33vw"
-                                            className="object-cover"
-                                        />
-                                    </div>
-
-                                    
-                                    <div className="p-6 flex-1 flex flex-col justify-between relative">
-                                        <div>
-                                            <h3 className="font-bold text-2xl text-gray-800">{category.title}</h3>
-                                            <p className="text-gray-600 mt-2">{category.description}</p>
-                                        </div>
-
-                                        {/* IKONA STRZAŁKI */}
-                                        <div className="flex justify-end items-center mt-4">
-                                            <span className="text-sm font-semibold text-retro-accent mr-2">
-                                                {isOpen ? "Zwiń" : "Zobacz pytania"}
-                                            </span>
-                                                <ChevronDown className={`w-6 h-6 text-retro-accent transition-transform duration-300 ${isOpen ? "rotate-180": ""}`}>
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                </ChevronDown>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-                                <div
-                                    className={`
-                                        bg-white px-6 overflow-hidden transition-all duration-300 ease-in-out
-                                        ${isOpen ? "h-auto py-6 opacity-100" : "max-h-0 py-0 opacity-0"}
-                                    `}
-                                >
-                                    <div className="space-y-6">
-                                        {category.faq.map((q, i) => (
-                                            <div key={i} className="border-b border-gray-100 last:border-0 pb-2 last:pb-0">
-                                                <p className="font-semibold text-gray-800 text-sm">{q.question}</p>
-                                                <p className="text-gray-600 text-sm mt-1">{q.answer}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                <FaqList categories={CATEGORY} />
             </div>
         </section>
     );

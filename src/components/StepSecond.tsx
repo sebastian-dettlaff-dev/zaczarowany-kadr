@@ -16,6 +16,7 @@ return(
       <div className="flex flex-col gap-3">
         {plan.map((plan) => (
           <button
+            aria-label={`Wybierz pakiet: ${plan}`}
             key={plan}
             onClick={() => nextStep('plan', plan)}
              className="flex-1 border border-white/20 bg-white/5 py-6 px-4 rounded-xl text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white/10 hover:border-white/40 transition-all duration-300 group"

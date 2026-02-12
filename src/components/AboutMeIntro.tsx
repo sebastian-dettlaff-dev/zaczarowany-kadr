@@ -5,7 +5,6 @@ export default function AboutMeIntro() {
 		<>
 			<section className='relative w-full h-auto py-16  md:py-24 flex flex-col items-center justify-center overflow-hidden'>
 				{/* Obraz tła z fotografką */}
-				<h1 className="sr-only">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
 				<div className='absolute inset-0 z-0'>
 					<Image
 						src='/assets/images/profesjonalny-aparat-fotograficzny-na-stoliku.webp' // Zmień na ścieżkę do Twojego zdjęcia
@@ -30,7 +29,7 @@ export default function AboutMeIntro() {
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 -rotate-6 translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/assets/images/fotograf-zaczarowanykadr.jpg' 
+									src='/assets/images/fotograf-zaczarowanykadr.webp' 
 									alt='Fotografka Klaudia z usmiechem zajmujaca sie swoja praca w domowym studio.'
 									fill
 									className='object-cover object-top'
@@ -73,7 +72,7 @@ export default function AboutMeIntro() {
 					
 					<div className='w-full md:w-1/2 space-y-6 text-center md:text-left'>
 					
-						<h2 className='text-4xl md:text-3xl font-bold mt-4 p-2'>
+						<h2 className='text-4xl md:text-3xl font-bold mt-4 p-2 leading-relaxed'>
 							Cześć! Jestem Klaudia – fotografka z Wejherowa, działająca w całym Trójmieście.
 						</h2>
 							<div className='space-y-4 text-white/90 text-lg'>
@@ -94,10 +93,8 @@ export default function AboutMeIntro() {
                             Do zobaczenia na Sesji! 
                         </p>
                     </div>
-						{/* <button className='  px-8 py-3 rounded-full transition-colors cursor-pointer'>
-							Poznaj moje portfolio
-						</button> */}
-						<Link href="/portfolio" className="inline-block bg-white text-black px-8 py-3 rounded-full font-medium hover:scale-95 
+						
+						<Link aria-label='Poznaj moje portfolio' href="/portfolio" className="inline-block bg-white text-black px-8 py-3 rounded-full font-medium hover:scale-95 
 						hover:bg-gray-200 transition-colors shadow-lg">Poznaj moje portfolio</Link>
 					</div>
 				</div>

@@ -8,7 +8,7 @@ interface StepFifthProps {
 export default function StepFifth({ nextStep, formData, updateField }: StepFifthProps) {
      return (
         <div className="space-y-4">
-      <h2 className=" uppercase p-4 text-center">EMAIL</h2>    
+      <h2 className="p-4 text-center">EMAIL</h2>    
         <div className="flex flex-col gap-3">
         <input
           type="text"
@@ -21,6 +21,7 @@ export default function StepFifth({ nextStep, formData, updateField }: StepFifth
       </div>
       {formData.email.length > 4 && (
                     <button 
+                    aria-label="Potwierdź email"
                         onClick={() => nextStep('email', formData.email)} 
                         className="p-4 bg-cyan-500 text-black font-bold rounded-xl animate-pulse text-[10px] tracking-[0.2em]"
                     >

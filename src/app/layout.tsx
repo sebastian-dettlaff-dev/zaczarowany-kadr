@@ -8,6 +8,8 @@ import { getSchemaDataJSONLD } from "@/lib/jsonLd";
 import FloatingActionButton from "@/components/FloatingActionButton";
 import CookiesBanner from "@/components/CookiesBanner";
 import "./globals.css";
+import ReCaptchaWrapper from "@/components/ReCaptchaWrapper";
+import { GoogleAnalytics } from '@next/third-parties/google'
 // FONTS
 const serif = Cormorant_Garamond({
 subsets: ["latin-ext"],
@@ -35,30 +37,57 @@ const mono = Space_Mono({
 //   subsets: ["latin"],
 // });
 
-export const metadata: Metadata = {  
-  // Main metadata for the website
+export const metadata: Metadata = {
+  // 1. Kluczowe dla poprawnych linków do zdjęć i URL-i
+  metadataBase: new URL('https://zaczarowanykadr.pl'),
+  
   title: {
-    default: `${COMPANY_NAME} | Fotograf Wejherowo`, // Main title
-    template: `%s | ${COMPANY_NAME}` // Templaye for other pahes
+    default: `${COMPANY_NAME} | Fotograf Wejherowo`,
+    template: `%s | ${COMPANY_NAME}`
   },
-  description: "Profesjonalne usługi fotograficzne w Wejherowie: sesje rodzinne, ślubne i retro. Uchwyć wyjątkowe chwile.",
-// Metadata for social media sharing (Open Graph)
+  description: "Profesjonalne usługi fotograficzne w Wejherowie: sesje rodzinne, kobiece i wiele innych. Uchwyć wyjątkowe chwile.",
+  alternates: {
+    canonical: '/',
+  },
+//  for social media and SEO
   openGraph: {
     title: `${COMPANY_NAME} | Fotografia Wejherowo`,
     description: "Profesjonalne usługi fotograficzne w Wejherowie. Sesje z duszą.",
-    url: "https://zaczarowany-kadr.pl",
+    url: "https://zaczarowanykadr.pl",
     siteName: COMPANY_NAME,
     images: [
       {
-        url: "/og-image.jpg", 
+        url: "/og-image.jpg", // Teraz dzięki metadataBase Next sam zrobi z tego https://...
         width: 1200,
         height: 630,
         alt: `${COMPANY_NAME} Fotografia`,
       },
     ],
     locale: "pl_PL",
-    type: "website",  
+    type: "website",
   },
+
+  //Twitter
+  twitter: {
+    card: 'summary_large_image',
+    title: `${COMPANY_NAME} | Fotografia Wejherowo`,
+    description: "Profesjonalne usługi fotograficzne w Wejherowie. Sesje z duszą.",
+    images: ['/og-image.jpg'],
+  },
+
+  //robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
   formatDetection: {
     telephone: false,
   },
@@ -68,15 +97,19 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) 
+}>)
 {
   const businessSchema = getSchemaDataJSONLD();
+
+  
   return (
     <html lang="pl">
       <head>
      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
       </head>
     <body className="min-h-screen flex flex-col antialiased">
+      <ReCaptchaWrapper>
+        
         {/* 1. NAVIGATION */}
         <Navbar />
         {/* 2. MAIN - Wypychacz. flex-grow sprawi, że zajmie całe wolne miejsce, 
@@ -88,7 +121,9 @@ export default function RootLayout({
         {/* 3. FOOTER */}
         <Footer />
         <CookiesBanner />
+      </ReCaptchaWrapper>
       </body>
+      <GoogleAnalytics gaId="G-MQN9DMJDCQ" />
     </html>
   );
 }

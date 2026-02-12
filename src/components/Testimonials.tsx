@@ -70,10 +70,50 @@ const reviews: Review[] = [
 		id:7,
 		author:"Maria Gil-Krekora",
 		date: "5 Listopada 2025",
-		content:"Serdecznie polecam sesje u Klaudii. Utalentowana, pomysłowa i sympatyczna. Podczas sesji panuje bezstresowa atmosfera, a na koniec dostałam nawet upominek ",
+		content:"Serdecznie polecam sesje u Klaudii. Utalentowana, pomysłowa i sympatyczna. Podczas sesji panuje bezstresowa atmosfera, a na koniec dostałam nawet upominek",
 		rating:5,
 		source:"Facebook"
 	},
+	{
+		id:8,
+		author:"Monika Mroczkowska",
+		date: "7 Lutego 2026",
+		content:"Polecam serdecznie, fajna, ciepła i kreatywna dziewczyna zdjęcia zrobione z pomysłem i sercem",
+		rating:5,
+		source:"Facebook"
+	},
+	{
+		id:9,
+		author:"Nina Sączek",
+		date: "4 Lutego 2026",
+		content:"Serdecznie polecam wszystkim sesje u Klaudii, ta dziewczyna jest przesympatyczna i otwarta na wszelkie pomysły. Zrealizujecie z nią każdy projekt. Dodatkowo ma szybkie tempo pracy, udziela wskazówek i porad co do pozowania. Atmosfera podczas sesji była przednia. Na pewno jeszcze nie raz się zobaczymy:)",
+		rating:5,
+		source:"Facebook"
+	},
+	{
+		id:10,
+		author:"Patrycja Bojarska",
+		date: "22 Stycznia 2026",
+		content:"Miałam przyjemność uczestniczyć w sesji u Klaudii  Luźna, swobodna atmosfera sprawiła, że czułam się tak dobrze, jakbym była u koleżanki na kawie Klaudia potrafi stworzyć komfort i naturalność, co widać potem na zdjęciach.Super móc zobaczyć siebie czyimiś oczami i uchwycić momenty, których sama bym nie dostrzegła.Serdecznie polecam",
+		rating:5,
+		source:"Facebook"
+	},
+	{
+		id:11,
+		author:"Julia Brzoza",
+		date: "22 Stycznia 2026",
+		content:"Klaudia ma OKO jakiego może pozazdrościć każdy fotograf, tego wyczucia stylu zdjęć, stylu glamour! Ona wie co będzie dla Ciebie dobre i smaczne. Inni muszą się „tego czegoś” długo uczyć, a Ty to poprostu masz. Z tym trzeba się urodzić Przy Klaudii poczujesz się swobodnie, komfortowo i kobieco! nie musisz znać się na pozowaniu, ona się wszystkim zajmie ja Ci Klaudia wróżę dużą karierę fotografa! Na pewno wrócę, po piękne zdjęcia i dobrą energię! Jeszcze raz dziękuję za piękne foty !!!",
+		rating:5,
+		source:"Facebook"
+	},
+	{
+		id:12,
+		author:"Karolina Sadowska",
+		date: "15 Stycznia 2026",
+		content:"Klimat super! Bez żadnego stresu. Klaudia ustawi, powie dokładnie co i jak, pokaże. Super dziewczyna, zdjęcia szybko dostarczone. Jestem zadowolona!",
+		rating:5,
+		source:"Facebook"
+	}
 	
 ];
 // Testimonials Component
@@ -92,7 +132,7 @@ const SourceIcon = ({ source }: { source: Review['source'] }) => {
     }
 };
 return (
-        <section className="py-24 bg-[#FDFCFB]">
+        <section  aria-label="Opinie klientów" className="py-24 bg-[#FDFCFB]">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <span className="text-retro-orange uppercase tracking-[0.3em] text-xs font-bold">Opinie</span>

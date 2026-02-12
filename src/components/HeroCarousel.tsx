@@ -66,14 +66,15 @@ export default function HeroCarousel() {
             {/* Nakładka z tekstem (Overlay) */}
             <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4">
               <div className="max-w-3xl text-center space-y-4">
-                <h1 className="text-3xl md:text-6xl font-bold tracking-tight">
+                <h3 className="text-3xl md:text-6xl font-bold tracking-tight">
                   {slide.title}
-                </h1>
+                </h3>
                 <p className="md:text-xl font-light opacity-90 max-w-xl mx-auto">
                   {slide.description}
                 </p>
                 <div className="pt-4">
                   <Link
+                    aria-label={`Przejdź do ${slide.buttonText}`}
                     href={slide.link}
                     className="inline-block bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors shadow-lg"
                   >

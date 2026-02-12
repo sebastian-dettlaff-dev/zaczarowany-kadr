@@ -72,7 +72,7 @@ export default function CategorySlider({ images }: { images: PortfolioImage[] })
                 onClick={() => setImage(null)}
                 className='fixed inset-0 w-screen h-screen flex justify-center items-center bg-black/30 backdrop-blur-md z-[100]'
                 >    
-                <button className="absolute top-10 right-10 text-4xl bg-transparent">&times;</button>
+                <button aria-label='Zamknij okno z obrazkiem' className="absolute top-10 right-10 text-4xl bg-transparent">&times;</button>
                 <motion.div
                 initial={{scale: 0.9, opacity:0}}
                 animate={{scale:1,opacity:1}}

@@ -11,6 +11,7 @@ import StepSeventh from "./StepSeventh";
 import StepEighth from "./StepEighth";
 import SuccessScreen from "./SuccessScreen"
 import { submitContactForm } from "@/app/actions/sendEmail"; 
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 //  DEFINE THE FORM DATA STRUCTURE
 export interface FormData {
@@ -28,13 +29,14 @@ const totalSteps=9;
 
 
 export default function MultiStepForm() {
+  const {executeRecaptcha} = useGoogleReCaptcha();
     const [step, setStep] = useState(0);
    
     
 // HOLD FORM DATA IN STATE
     const [formData, setFormData] =useState<FormData>({
        
-        sessionType: " ",
+        sessionType: "",
         plan:"",
         date_Of_Session: "",
         timeSlot:"",
@@ -53,9 +55,7 @@ export default function MultiStepForm() {
         setStep((prev) => prev +1);
     };
 
-    // const NextStep = () => {
-    //     setStep((prev) => prev +1);
-    // }
+  
 
     // Back to previous step manually
     const prevStep = () => {
@@ -68,35 +68,24 @@ export default function MultiStepForm() {
     };
 
 
-// const handleFinalSubmit = async () => {
-//     try {
-//         // Wywołujemy akcję serwerową z naszymi danymi
-//         const result = await submitContactForm(formData);
-        
-//         if (result.success) {
-//             alert("System Ready: Wiadomość została wysłana pomyślnie!");
-//             // Reset of contact form
-//             setStep(0); 
-//         } else {
-//             alert("Wystąpił błąd podczas wysyłania. Spróbuj ponownie.");
-//         }
-//     } catch (error) {
-//         console.error("Błąd krytyczny:", error);
-//         alert("Nie udało się połączyć z serwerem.");
-//     }
 // };
 const handleFinalSubmit = async () => {
+  if(!executeRecaptcha){
+    alert("Ochrona reCAPTCHA jeszcze się ładuje. Spróbuj za sekundę.");
+    return;
+  }
   try {
-    const result = await submitContactForm(formData);
+    const token = await executeRecaptcha("contact_form");
+    const result = await submitContactForm(formData,token);
     if (result.success) {
       // Zamiast alertu, idziemy do kroku nr 8 
       setStep(8); 
     } else {
-      alert("Błąd serwera. Spróbuj ponownie.");
+      alert(result.error|| "Błąd weryfikacji anty-botowej." );
     }
   } catch (error) {
     console.error("BŁĄD PODCZAS WYSYŁKI:", error);
-    alert("Błąd połączenia.");
+    alert("Błąd połączenia z serwerem.");
   }
 };
     return (
@@ -153,28 +142,6 @@ const handleFinalSubmit = async () => {
          </div>
 
 
-
-         {/* <div className="relative z-10 min-h-[400px]">
-            <p className="text-white text-sm tracking-tighter uppercase">Krok {step + 1}</p>
-            <div className="relative space-y-6 ">
-                {step === 0 &&
-                 (<StepOne formData={formData} nextStep={nextStep} />)}
-                 {step === 1 &&
-                 (<StepSecond formData={formData} nextStep={nextStep} />)}
-                 {step === 2 &&
-                 (<StepThird formData={formData} nextStep={nextStep} />)}
-                 {step === 4 &&
-                 (<StepFourth formData={formData} nextStep={nextStep} />)}
-                 {step === 5 &&
-                 (<StepFifth formData={formData} nextStep={nextStep} />)}
-                 {step === 6 &&
-                 (<StepSixth formData={formData} nextStep={nextStep} />)}
-                 {step === 7 &&
-                 (<StepSeventh formData={formData} nextStep={nextStep} />)}
-                 
-                 
-            </div>
-         </div> */}
            <div className="min-h-[300px]">
           <AnimatePresence mode="wait">
             <motion.div
@@ -213,8 +180,8 @@ const handleFinalSubmit = async () => {
              SYSTEM READY
              
            </div>
-           <button onClick={prevStep} className="hover:text-red-600 transition-colors bg-transparent text-white text-lg">
-              POPRZEDNI KROK 
+           <button aria-label="Przejdź do poprzedniego kroku" onClick={prevStep} className="hover:text-red-600 transition-colors bg-transparent text-white text-lg">
+            COFNIJ
            </button>
         </div>
 

@@ -51,3 +51,7 @@ a {
   }
   --animate-fade-up: fade-up 2s ease-out forwards;
 }
+.grecaptcha-badge { 
+  bottom: 150px !important; /* Dostosuj wysokość */
+  /* right: 20px !important; */
+}

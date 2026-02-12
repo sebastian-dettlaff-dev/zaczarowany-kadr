@@ -1,12 +1,39 @@
 // src/app/portfolio/page.tsx
 import CategorySlider from '@/components/CategorySlider';
+import { COMPANY_NAME } from '@/lib/constants';
 import { Metadata } from 'next';
 import { title } from 'process';
 import  CallToAction  from '@/components/CallToAction';
+// JSON-LD DLA PORTFOLIO
 
-export const metadata:Metadata = {
-title:"Portfolio",
-description:"W moim portfolio znajda Panstwo zarowno sesje rodzinne, grupowe czy indywidualne.Wykonouje je zarowno w domowym studio jak i w plenerze.Zobacz efekty mojej pracy , moze jestem fotografem ktorego szukasz!"
+
+
+export const metadata: Metadata = {
+  title: 'Portfolio | Emocje i chwile, do których będziesz wracać',
+  description: "Zobacz moje portfolio: magiczne sesje rodzinne, kobiece i ciążowe w Wejherowie. Sprawdź efekty moich prac w studio oraz plenerze. Zapraszam!",
+  alternates: {
+    canonical: "/portfolio", // Next.js sam doklei domenę dzięki metadataBase
+  },
+  openGraph: {
+    title: `Portfolio - Zaczarowany Kadr`,
+    description: "Galeria sesji fotograficznych: od pełnych emocji spotkań rodzinnych po zmysłowe sesje kobiece. Zapraszam do mojego świata fotografii.",
+    url: "https://zaczarowanykadr.pl/portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/portfolio-og.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "Portfolio Zaczarowany Kadr - Fotograf Wejherowo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio - Zaczarowany Kadr",
+    description: "Galeria profesjonalnych sesji fotograficznych w Wejherowie.",
+    images: ["/portfolio-og.jpg"],
+  },
 };
 
 const PORTFOLIO_DATA = [
@@ -330,73 +357,144 @@ const PORTFOLIO_DATA = [
     title:"Sesje Okolicznościowe",
     images: [
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa-para-w-Swieta-Bozego-Narodzenia-studio-domowe_njvwbw",
+        alt:"Sesja okolicznościowa w dniu Bożego Narodzenia w studio domowym."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa-para-studio-domowe-wejherowo_fpnyvv",
+        alt:"Sesja okolicznościowa pary w studio domowym w Wejherowie."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/fotografia-studio-domowe-magiczne-chwile_pxtl9x",
+        alt:"Sesja okolicznościowa w domowym studio. Magiczne chwile."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/para-przytula-sie-kadr_k5r749",
+        alt:"Para przytulająca się na sesji okolicznościowej w domowym studio."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/calujaca-sie-para-christmas_jpvcxa",
+        alt:"Para calujaca sie na sesji okolicznościowej w domowym studio."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/zakochani-w-swieta-studio-fotograficzne-pomorskie_axwr8f",
+        alt:"Zakochani w dniu Bożego Narodzenia w studio fotograficznym na Pomorzu."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/usmiechnieta-dziewczyna-w-stroju-mikolajkowym-zaczarowanyKadr_owha70",
+        alt:"Uśmiechnięta dziewczyna w stroju mikolajkowym w studio fotograficznym Zaczarowany Kadr."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/sesja-w-studio-domowym-serce-pocalunek_l8dbuu",
+        alt:"Sesja okolicznościowa w domowym studio. Serce i pocalunek."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-fotograficzna/para-patrzaca-sobie-w-oczy-fotograf_dckhga",
+        alt:"Para patrząca sobie w oczy na sesji fotograficznej w domowym studio."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/mama-z-synkiem-wspolne-chwile-zabawa_hftqnz",
+        alt:"Mama z synkiem w wspolnych chwilach zabawy w domowym studio."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/mikolajkowa-sesja-w-studio-zabawa_g9xklj",
+        alt:"Mikolajkowa sesja w studio zabawa."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/mama-z-synkiem-studio-domowe-choinka_tjf3mq",
+        alt:"Mama z synkiem w studio domowym w dniu Bożego Narodzenia."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/mama-z-synem-dobrze-sie-bawia-studio-foto_aihrb1",
+        alt:"Mama z synem dobrze się bawią w studio fotograficznym."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-okolicznosciowa/cukierki-Bozonarodzeniowe-smaki-swiat-studio-fotograficzne_bbrdax",
+        alt:"Cukierki Bożonarodzeniowe w smakach świata w studio fotograficznym Zaczarowany Kadr."
+      }
+      ,
+      {
+        id:"portfolio/sesja-okolicznosciowa/dziewczyna-w-stroju-mikolaja-studio-wejherowo_ovxu8p",
+        alt:"Dziewczyna w stroju mikolaja w studio fotograficznym Wejherowo."
       },
       {
-        id:"",
-        alt:""
+        id:"portfolio/sesja-fotograficzna/choinka-dziewczyna-w-swiatecznym-stroju_b14auq",
+        alt:"Dziewczyna w stroju swiatecznym przy choince w studio fotograficznym Zaczarowany Kadr."
       },
+      {
+        id:"portfolio/sesja-okolicznosciowa/para-zakochanych-w-swieta-sesja-fotograficzna_spwcxs",
+        alt:"Para zakochanych w dniu Bożego Narodzenia na sesji fotograficznej w studio Zaczarowany Kadr."
+      }
     ]
   }
 ];
 
-
+const allImagesSchema = PORTFOLIO_DATA.flatMap((category) =>
+  category.images.map((img) => ({
+    "@type": "ImageObject",
+    "contentUrl": `https://res.cloudinary.com/dixpqoxzu/image/upload/${img.id}`,
+    "description": img.alt,
+    "caption": img.alt,
+    "name": img.alt,
+    // POPRAWKA 1: Pisownia przez "s"
+    "acquireLicensePage": "https://zaczarowanykadr.pl/kontakt", 
+    // POPRAWKA 2: Tylko ID, bez powielania całego obiektu firmy
+    "creator": { "@id": "https://zaczarowanykadr.pl/#business" },
+    "copyrightHolder": { "@id": "https://zaczarowanykadr.pl/#business" }
+  }))
+);
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ImageGallery",
+        "@id": "https://zaczarowanykadr.pl/portfolio/#gallery",
+        "name": `Portfolio - ${COMPANY_NAME}`,
+        "description": "Kolekcja sesji fotograficznych: rodzinnych, kobiecych, narzeczeńskich, ciążowych i wizerunkowych realizowanych w Wejherowie i okolicach.",
+        "url": "https://zaczarowanykadr.pl/portfolio",
+        "publisher": { "@id": "https://zaczarowanykadr.pl/#business" },
+        "about": PORTFOLIO_DATA.map((category) => ({
+          "@type": "Thing",
+          "name": category.title
+        })),
+        hasPart: allImagesSchema.flat()
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://zaczarowanykadr.pl/portfolio/#webpage",
+        "url": "https://zaczarowanykadr.pl/portfolio",
+        "name": `Portfolio - Fotograf Wejherowo - ${COMPANY_NAME}`,
+        "isPartOf": { "@id": "https://zaczarowanykadr.pl/#website" },
+        "description": "Galeria prac fotograficznych - Zaczarowany Kadr. Zobacz efekty sesji w studio domowym oraz w plenerze.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona Główna",
+              "item": "https://zaczarowanykadr.pl"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Portfolio",
+              "item": "https://zaczarowanykadr.pl/portfolio"
+            }
+          ]
+        }
+      }
+    ]
+  };
 export default function PortfolioPage() {
   return (
+    
     <main className="py-30">
+      	{/* Skrypt Schema JSON-LD for robots to understand the portfolio page */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
+			/>
       <div className='flex flex-col items-center justify-center flex-wrap space-y-6'>
         <span className='font-serif text-4xl text-retro-black text-center'>Moze jestem twoim fotografem?</span>
         <h1 className='text-retro-accent text-3xl text-center italic'>Zobacz efekty mojej pracy i przekonaj sie sam/sama
@@ -404,7 +502,7 @@ export default function PortfolioPage() {
         </h1>
       </div>
       {PORTFOLIO_DATA.map((category) => (
-        <section key={category.title} className="mt-12 mb-7 space-y-6">
+        <section aria-label={`Portfolio kategorii: ${category.title}`} key={category.title} className="mt-12 mb-7 space-y-6">
           <h2 className="text-center px-6 text-4xl text-retro-black">{category.title}</h2>
           {/* KLUCZOWE: Sprawdź czy przekazujesz category.images */}
           <CategorySlider images={category.images} />

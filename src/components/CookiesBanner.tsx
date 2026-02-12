@@ -36,6 +36,7 @@ return (
       </div>
 
       <button
+      aria-label='Zaakceptuj polityke prywatnosci'
         onClick={acceptCookies}
         
         className="shrink-0 w-fit whitespace-nowrap bg-retro-black text-retro-beige px-5 py-2 md:px-8 md:py-3 rounded-full font-mono text-[10px] md:text-xs tracking-widest uppercase transition-all hover:scale-105 active:scale-95 border border-retro-black"

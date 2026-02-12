@@ -2,7 +2,7 @@
 export default function WorkflowSteps() {
 return (
     <>
-    <section className="bg-zinc-950 py-20 px-6">
+    <section aria-label="Jak wyglada wspolpraca" className="bg-zinc-950 py-20 px-6">
   <div className="max-w-4xl mx-auto">
     <h2 className="text-4xl mb-12 text-center">
       Jak wygląda <span className="text-retro-orange text-4xl">współpraca?</span>

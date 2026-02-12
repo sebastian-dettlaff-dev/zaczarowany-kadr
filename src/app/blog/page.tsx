@@ -5,6 +5,22 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { COMPANY_NAME } from "@/lib/constants";
 import { ChevronLeftCircle, ChevronRightCircle } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Blog fotograficzny - Porady, Inspiracje i Kulisy Sesji',
+  description: 'Odkryj świat fotografii z Zaczarowanym Kadrem. Porady, inspiracje i kulisy sesji zdjęciowych w Wejherowie i na Pomorzu.',
+  // for social media and SEO
+  openGraph: {
+    title: 'Blog fotograficzny - Porady, Inspiracje i Kulisy Sesji | Zaczarowany Kadr',
+    description: 'Odkryj świat fotografii z Zaczarowanym Kadrem. Porady, inspiracje i kulisy sesji zdjęciowych w Wejherowie i na Pomorzu.',
+    url: '/blog',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/blog',
+  },
+}
 
 interface Post {
   _id: string;
@@ -45,6 +61,41 @@ export default async function BlogPage(props: {
 
   const TOTAL_QUERY = `count(*[_type == "post"])`;
 
+
+  // schema org for blog list page
+  const blogListSchema = (posts: Post[]) => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://zaczarowanykadr.pl/blog/#blog",
+      "name": "Blog Zaczarowany Kadr",
+      "description": "Kulisy sesji, porady i inspiracje fotograficzne.",
+      "publisher": { "@id": "https://zaczarowanykadr.pl/#business" },
+      "blogPost": posts.map(post => ({
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "url": `https://zaczarowanykadr.pl/blog/${post.slug.current}`,
+        "datePublished": post.publishedAt,
+        "image": post.mainImage ? urlFor(post.mainImage).url() : "https://zaczarowanykadr.pl/default-og-image.jpg",
+        "author": {
+            "@type": "Person",
+            "name": "Klaudia", // Możesz też brać z post.author.name jeśli masz to w Sanity
+            "url": "https://zaczarowanykadr.pl/"
+          }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://zaczarowanykadr.pl/blog/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://zaczarowanykadr.pl" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zaczarowanykadr.pl/blog" }
+      ]
+    }
+  ]
+});
+
   const [posts, totalPosts]: [Post[], number] = await Promise.all([
     client.fetch(QUERY, { start, end },{next:{tags:['posts']}}),
     client.fetch(TOTAL_QUERY,{},{next:{tags:['posts']}}),
@@ -54,6 +105,10 @@ export default async function BlogPage(props: {
 
   return (
     <main className="min-h-screen bg-[#FDFCF8] py-24 px-4 overflow-hidden">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema(posts)) }}
+/>
       <div className="max-w-6xl mx-auto">
         <header className="relative mb-24 text-center">
           <span className="text-retro-orange uppercase tracking-[0.4em] text-xs font-bold mb-4 mt-4 block">

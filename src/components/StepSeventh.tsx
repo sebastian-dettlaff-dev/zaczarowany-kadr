@@ -21,6 +21,7 @@ export default function StepSeventh({ nextStep, formData, updateField }: StepSev
       </div>
       {formData.name.length > 4 && (
                     <button 
+                    aria-label="Potwierdź numer telefonu"
                         onClick={() => nextStep('name', formData.name)} // Dopiero tu przeskakuje krok
                         className="p-4 bg-cyan-500 text-black font-bold rounded-xl animate-pulse text-[10px] tracking-[0.2em]"
                     >

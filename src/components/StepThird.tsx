@@ -37,18 +37,7 @@ const nextMonth =() => {
 }
     return(
 
-    //     <div className="space-y-4">
-    //   <h2 className=" font-serif text-retro-black">Podaj swoje imię i nazwisko:</h2>    
-    //     <div className="flex flex-col gap-3">
-    //     <input
-    //       type="text"
-    //       value={formData.name}
-    //       onChange={(e) => nextStep('name', e.target.value)}
-    //       placeholder="Imię i nazwisko"
-    //       className="w-full p-4 border border-white/20 bg-white/5 rounded-xl text-white placeholder-white/60 text-[10px] tracking-[0.3em] uppercase focus:outline-none focus:ring-2 focus:ring-retro-orange focus:border-retro-orange transition-all duration-300"
-    //     />
-    //   </div>
-    //   </div>
+    
         <div className="space-y-9 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className='flex flex-col justify-between items-center border-b border-white/10 p-4'>
 
@@ -57,7 +46,7 @@ const nextMonth =() => {
                     <span className='text-cyan-500/50 ml-1.5'>{year}</span>
                 </h2>
                 <p className="text-white  tracking-widest uppercase font-mono">Wybierz date sesji</p>
-                <button onClick={nextMonth} className="text-white/60 hover:text-white tracking-widest uppercase font-mono transition-colors bg-transparent">
+                <button aria-label="Przejdź do następnego miesiąca" onClick={nextMonth} className="text-white/60 hover:text-white tracking-widest uppercase font-mono transition-colors bg-transparent">
                 <ChevronRight className="w-8 h-8" />
                 </button>
                 </div>
@@ -79,6 +68,7 @@ const nextMonth =() => {
                         <button
                             key={day}
                             onClick={() => nextStep('date_Of_Session', dateString)}
+                            aria-label={`Wybierz datę: ${dateString}`}
                             className={`
                                 aspect-square flex items-center justify-center rounded-lg text-xs font-mono transition-all duration-300 bg-transparent
                                 ${isSelected 
