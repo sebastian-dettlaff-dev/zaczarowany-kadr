@@ -26,7 +26,7 @@ const CATEGORY: CategoryItem[] = [
     {
         title: "Sesja – wszystko co musisz wiedzieć",
         description: "Chwila oddechu tylko dla Ciebie.",
-        image: "/assets/images/pexels-samuel-walker-15032-569098.jpg",
+        image: "/assets/images/polaroidy-na-stoliku-fotografia-profesjonalna.jpg",
         faq: [
             { 
                 question: "Ile trwa sesja?", 

@@ -59,7 +59,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-			
+			{/* MENU MOBILNE */}
             <div
                 className={`
                     fixed inset-0 h-screen w-full bg-[#faf9f6]  flex flex-col items-center justify-start gap-6 text-2xl text-retro-black transition-transform duration-500 ease-in-out md:hidden overflow-y-auto pb-10 pt-25 z-90
@@ -70,7 +70,7 @@ export default function Navbar() {
                 <Link aria-label='Poznaj moje portfolio' href='/portfolio' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Portfolio</Link>
 				<Link aria-label='Zobacz moje uslugi' href='/oferta' className=' hover:text-retro-orange transition-colors' onClick={()=>setIsOpen(false)}>Oferta</Link>
                 <Link aria-label='Czytaj moje wpisy blogowe' href='/blog' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Blog</Link>
-				<Link aria-label='Zobacz najczesciej zadawane pytania' href='/faq' className=' hover:text-retro-orange transition-colors' onClick={()=>setIsOpen(false)}>Q&A</Link>
+				<Link aria-label='Zobacz najczesciej zadawane pytania' href='/faq' className=' hover:text-retro-orange transition-colors' onClick={()=>setIsOpen(false)}>FAQ</Link>
                 <Link aria-label='Zobacz moje cennik uslug' href='/cennik' className="hover:text-retro-orange" onClick={() => setIsOpen(false)}>Cennik</Link>
                 <Link
 					aria-label='Skontaktuj sie ze mna'
@@ -80,7 +80,7 @@ export default function Navbar() {
                 >
                     Kontakt
                 </Link>
-				<Link aria-label='Zobacz regulamin serwisu' href='/regulamin' className='text-black bg-retro-beige px-10  py-3 rounded-sm '>Regulamin</Link>
+				<Link aria-label='Zobacz regulamin serwisu' href='/regulamin' className='text-black bg-retro-beige px-10  py-3 rounded-sm ' onClick={() => setIsOpen(false)}>Regulamin</Link>
             </div>
         </nav>
 	);
