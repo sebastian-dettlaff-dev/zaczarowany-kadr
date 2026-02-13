@@ -40,7 +40,7 @@ export async function submitContactForm(formData: FormData, token: string) {
         // 3. Wysyłka przez Resend (zmieniona nazwa zmiennej na resendResult)
         const resendResult = await resend.emails.send({
             from: 'Zaczarowany Kadr <kontakt@zaczarowanykadr.pl>',
-            to: 'sdettlaff679@gmail.com',
+            to: 'okoniewska.klaudia06@gmail.com',
             subject: `Nowe zlecenie: Sesja ${v.sessionType}`,
             text: `
                 Klient: ${v.name}
