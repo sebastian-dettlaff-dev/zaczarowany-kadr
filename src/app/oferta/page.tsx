@@ -378,7 +378,7 @@ export default function Offer() {
             
             {/* Background Image */}
             <Image 
-              src="/assets/images/sesja_ciazowa_i_noworodkowa.webp" 
+              src="/assets/images/sesja_ciazowa_i_noworodkowa_lbva2i.webp" 
               alt="Sesja Ciążowa i Noworodkowa w profesjonalnm studio fotograficznym ZaczarowanyKadr" 
               fill 
               priority 
