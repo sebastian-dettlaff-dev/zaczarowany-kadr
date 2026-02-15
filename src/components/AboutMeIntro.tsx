@@ -11,7 +11,7 @@ export default function AboutMeIntro() {
 						alt='Fotografka robiąca zdjęcia'
 						fill
 						priority
-						className='object-cover opacity-60 object-[40%_20%] md:object-20%_90%]'
+						className='object-cover opacity-90 object-[40%_20%] md:object-20%_90%]'
 						// style={{objectPosition: '70% 70%'}} // Niska przezroczystość, aby tekst był czytelny
 					/>
 				</div>
