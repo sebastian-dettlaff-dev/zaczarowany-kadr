@@ -134,7 +134,7 @@ export default function Footer() {
 				© {new Date().getFullYear()} {COMPANY_NAME}. Wszystkie prawa
 				zastrzeżone.
 				<div className="mt-2 tracking-widest uppercase">
-        Designed & Developed with by 
+        Designed & Developed by 
         <a 
 			aria-label='Link do portfolio autora'
             href="https://github.com/CaptainSmile1" // Może być link do GitHub, LinkedIn lub portfolio
