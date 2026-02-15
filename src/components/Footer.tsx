@@ -137,7 +137,7 @@ export default function Footer() {
         Designed & Developed by 
         <a 
 			aria-label='Link do portfolio autora'
-            href="https://github.com/CaptainSmile1" // Może być link do GitHub, LinkedIn lub portfolio
+            href="https://github.com/sebastian-dettlaff-dev" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-retro-orange transition-colors ml-1 underline-offset-4 font-bold text-sm"
