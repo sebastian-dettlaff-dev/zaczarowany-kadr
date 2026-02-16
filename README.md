@@ -39,3 +39,19 @@ Follow these steps to set up the project on your local machine:
 ```bash
 git clone [https://github.com/sebastian-dettlaff-dev/zaczarowany-kadr.git](https://github.com/sebastian-dettlaff-dev/zaczarowany-kadr.git)
 cd zaczarowany-kadr
+```
+### 2. Install dependencies
+```bash
+npm install
+```
+### 3. Configure environment variables
+```bash
+cp .env.example .env.local
+```
+### 4. Run the development server
+```bash
+npm run dev
+The application will be available at: http://localhost:3000
+```
+###
+ 
