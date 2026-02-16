@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
           <h2 className="text-2xl font-bold pb-10 text-retro-black text-center">1. Informacje ogólne</h2>
           <p className="leading-relaxed font-serif">
             Właścicielem strony zaczarowanykadr.pl oraz Administratorem Danych Osobowych jest 
-            <span className="font-bold font-serif"> Klaudia Dettlaff</span>, prowadząca działalność nierejestrowaną 
+            <span className="font-bold font-serif"> Klaudia Okoniewska</span>, prowadząca działalność nierejestrowaną 
             w rozumieniu ustawy Prawo przedsiębiorców, zamieszkała w Wejherowie (kod pocztowy 84-200). 
             Kontakt: <span className="text-retro-orange font-bold font-serif">kontakt@zaczarowanykadr.pl</span>.
           </p>
