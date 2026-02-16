@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enchanted Frame (Zaczarowany Kadr) - Photography Portfolio
 
-## Getting Started
+A modern, responsive photography portfolio built with a focus on performance, SEO, and high-end visual storytelling.
 
-First, run the development server:
+🔗 **Live Demo:** [https://zaczarowanykadr.pl/](https://zaczarowanykadr.pl/)
 
+---
+
+## 🛠 Tech Stack
+
+* **Framework:** Next.js 14 (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Forms:** React Hook Form + Zod (Validation)
+* **Backend/CMS:** Sanity.io
+
+## 🌟 Key Technical Features
+
+1. **Image Optimization & Performance:**
+   Utilized the `next/image` component and `blur DataURL` placeholders to ensure lightning-fast gallery loading and prevent Cumulative Layout Shift (CLS).
+
+2. **Advanced Multi-step Forms:**
+   Implemented a custom multi-step contact form (`MultiStepForm.tsx`) with full TypeScript typing and robust client/server-side validation using Zod.
+
+3. **Interactive User Experience:**
+   Created unique UI components like `RetroLens` and `HeroCarousel` to provide an engaging and immersive experience for visitors.
+
+4. **Clean Code & SEO Excellence:**
+   Focused on semantic HTML and advanced metadata optimization using Next.js Metadata API and Schema.org structured data.
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+Follow these steps to set up the project on your local machine:
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone [https://github.com/sebastian-dettlaff-dev/zaczarowany-kadr.git](https://github.com/sebastian-dettlaff-dev/zaczarowany-kadr.git)
+cd zaczarowany-kadr
