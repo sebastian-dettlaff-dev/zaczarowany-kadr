@@ -43,6 +43,26 @@ Result: Achieved a significant reduction in LCP (Largest Contentful Paint) while
 Sanity CMS: Custom schemas built for the photographer to easily manage blog posts and gallery categories without touching the code.
 
 ---
+Treść wiadomości Gemini
+To genialny pomysł. W projektach wizualnych (fotografia) SEO to nie tylko dodatek, to fundament, bo roboty Google nie "widzą" zdjęć tak jak my – widzą tylko kod, który im podasz.
+
+Dodanie sekcji o SEO w README pokazuje, że nie jesteś tylko "koderem od UI", ale rozumiesz biznesowy aspekt tworzenia stron.
+
+Oto jak możesz to profesjonalnie opisać w swoim README. Proponuję dodać nową sekcję lub rozbudować istniejącą:
+
+🔍 Search Engine Optimization (SEO) & Accessibility
+To ensure maximum visibility and a great user experience, I implemented a comprehensive SEO strategy:
+
+Semantic HTML: Used proper header hierarchy and descriptive tags to help search engines understand the content structure.
+
+Dynamic Metadata API: Leveraged Next.js 14 Metadata API to generate unique titles and descriptions for every page and blog post.
+
+Automated Image Alts: Integrated a system where alt texts are fetched directly from Sanity CMS, ensuring every high-resolution image is accessible to screen readers and indexable by Google Images.
+
+JSON-LD Structured Data: Implemented Schema.org (e.g., ImageGallery, ProfessionalService, BreadcrumbList) to enable rich snippets in search results.
+
+Performance-Driven SEO: Optimized Core Web Vitals (LCP/CLS) using Cloudinary and Next.js Image to ensure a ranking boost from Google’s page experience signals.
+---
 
 ## 🚀 Getting Started (Local Development)
 
