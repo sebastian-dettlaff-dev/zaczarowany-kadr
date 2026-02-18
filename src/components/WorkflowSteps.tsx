@@ -9,9 +9,9 @@ return (
     </h2>
 
     <div className="space-y-12">
-      {/* KROK 1 */}
+      {/* STEP 1 */}
       <div className="relative flex flex-col items-center md:items-start gap-8 group md:flex-row ">
-        {/* Element graficzny: Numer w pierścieniu obiektywu */}
+       
         <div className="flex-shrink-0 relative w-20 h-20 flex items-center justify-center ">
           <div className="absolute inset-0 rounded-full border-2 border-dashed border-zinc-700 group-hover:rotate-90 transition-transform duration-700"></div>
           <div className="absolute inset-2 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center">
@@ -19,7 +19,7 @@ return (
           </div>
         </div>
 
-        {/* Treść pod SEO */}
+        {/* SEO TEXT */}
         <div className="flex-grow pt-2">
           <h3 className="text-center md:text-left text-xl font-bold mb-2 uppercase tracking-tight">Konsultacja i wizja</h3>
           <p className="text-zinc-400 leading-relaxed max-w-2xl text-center md:text-left">
@@ -28,7 +28,7 @@ return (
         </div>
       </div>
 
-      {/* KROK 2 */}
+      {/* STEP 2 */}
       <div className="relative flex flex-col items-center gap-8 group md:flex-row md:items-start">
         <div className="flex-shrink-0 relative w-20 h-20 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full border-2 border-dashed border-zinc-700 group-hover:rotate-90 transition-transform duration-700"></div>
@@ -45,7 +45,7 @@ return (
         </div>
       </div>
 
-      {/* KROK 3 */}
+      {/* STEP 3 */}
       <div className="relative flex flex-col items-center md:items-start gap-8 group md:flex-row">
         <div className="flex-shrink-0 relative w-20 h-20 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full border-2 border-dashed border-zinc-700 group-hover:rotate-90 transition-transform duration-700"></div>

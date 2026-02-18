@@ -2,33 +2,33 @@
 
 @plugin "@tailwindcss/typography";
 @theme {
-    /* Kolory Retro */
-    --color-retro-beige: #f5e6ca;   /* Tło - kolor papieru */
-    --color-retro-orange: #d97706;  /* Akcent - ciepły bursztyn */
-    --color-retro-grey: #4b5563;    /* Tekst pomocniczy */
-    --color-retro-black: #1f2937;   /* Główny tekst - głęboki grafit */
+    
+    --color-retro-beige: #f5e6ca;   
+    --color-retro-orange: #d97706;  
+    --color-retro-grey: #4b5563;    
+    --color-retro-black: #1f2937;   
 	--color-retro-accent: #d97706;
 
-    /* Fonts from NEXT JS LAYOUT.TSX */
+    
  --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
 
-/*  */
+
 @layer base{
-	/* body gets retro beige background and retro black text */
+	
 	body{
 		@apply bg-retro-beige text-retro-black font-sans leading-relaxed;
 	}
-	/* All headings got serif font */
+	
 	h1,h2,h3,h4{
 		@apply font-serif font-semibold tracking-tight text-white ;
 	}
 	h4{
 		@apply text-lg font-serif font-semibold tracking-tight;
 	}
-	/* All paragraphs use sans-serif font */
+	
 	p,span{
 		@apply font-sans font-light text-lg;
 	}
@@ -37,7 +37,7 @@
 	}
 	button:hover {
     @apply text-retro-beige opacity-70 bg-gray-800; 
-    /* Albo np. delikatne przesunięcie w górę */
+    
     @apply -translate-y-0.5;
 }
 a {
@@ -52,6 +52,6 @@ a {
   --animate-fade-up: fade-up 2s ease-out forwards;
 }
 .grecaptcha-badge { 
-  bottom: 150px !important; /* Dostosuj wysokość */
-  /* right: 20px !important; */
+  bottom: 150px !important; 
+ 
 }

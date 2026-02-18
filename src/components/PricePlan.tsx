@@ -37,7 +37,7 @@ export const pricePlanPageSchemaData = {
           "@type": "ListItem",
           "position": 2,
           "name": "Cennik",
-          "item": "https://zaczarowanykadr.pl/cennik" // upewnij się, że URL jest poprawny
+          "item": "https://zaczarowanykadr.pl/cennik" 
         }
       ]
     },
@@ -53,9 +53,9 @@ export const pricePlanPageSchemaData = {
           "name": `Pakiet ${plan.name}`,
           "description": plan.description
         },
-        "price": plan.price.replace(/[^0-9]/g, ""), // wyciągamy samą liczbę
+        "price": plan.price.replace(/[^0-9]/g, ""), 
         "priceCurrency": "PLN",
-        "availability": "https://schema.org/PreOrder" // oznacza usługę na miejscu
+        "availability": "https://schema.org/PreOrder" 
       }))
     }
   ]

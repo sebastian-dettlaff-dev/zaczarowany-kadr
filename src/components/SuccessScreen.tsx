@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function SuccessScreen() {
   return (
     <div className="flex flex-col items-center justify-center py-10 text-center space-y-6">
-      {/* Animowane kółko z ptaszkiem */}
+      {/* Animation */}
       <motion.div 
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -24,7 +24,7 @@ export default function SuccessScreen() {
 
       <button 
       aria-label="Powrót do strony głównej"
-        onClick={() => window.location.reload()} // Odświeża stronę, by zresetować formularz
+        onClick={() => window.location.reload()} 
         className="mt-4 text-cyan-400 border border-cyan-400/30 px-6 py-2 rounded-full text-[9px] tracking-widest hover:bg-cyan-400 hover:text-black transition-all"
       >
         POWRÓT DO STRONY

@@ -33,7 +33,7 @@ export default function FloatingActionButton(){
     return(
         <div className='fixed bottom-6 right-6 flex flex-col items-center z-50'>
             <AnimatePresence>
-                {/* { - beacouse i will create elements for rendering using some method} */}
+                
                 {
                 isOpen && (
                     <div className='flex flex-col-reverse gap-4 mb-4 items-center'>
@@ -48,7 +48,7 @@ export default function FloatingActionButton(){
                         exit={{opacity:0,scale:0,y:20}}
                         transition={{delay:index *0.1}}
                         className={`${option.color} text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform active:scale-95 group relative`}
-                        // title={option.label}
+                        
                         >
                             <span className="absolute right-full mr-3 whitespace-nowrap bg-gray-800 text-white text-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                             {option.label}
@@ -60,7 +60,7 @@ export default function FloatingActionButton(){
                 )
                 }
             </AnimatePresence>
-            {/* Main button */}
+            
             <button 
             aria-label='Otwórz menu kontaktu'
             onClick={()=> setIsOpen(!isOpen)}

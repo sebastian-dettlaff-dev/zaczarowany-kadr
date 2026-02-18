@@ -27,18 +27,10 @@ const mono = Space_Mono({
   weight: ['400', '700'],
   variable: "--font-mono",
 });
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
-  // 1. Kluczowe dla poprawnych linków do zdjęć i URL-i
+  // main url 
   metadataBase: new URL('https://zaczarowanykadr.pl'),
   
   title: {
@@ -57,7 +49,7 @@ export const metadata: Metadata = {
     siteName: COMPANY_NAME,
     images: [
       {
-        url: "/og-image.jpg", // Teraz dzięki metadataBase Next sam zrobi z tego https://...
+        url: "/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: `${COMPANY_NAME} Fotografia`,
@@ -112,8 +104,6 @@ export default function RootLayout({
         
         {/* 1. NAVIGATION */}
         <Navbar />
-        {/* 2. MAIN - Wypychacz. flex-grow sprawi, że zajmie całe wolne miejsce, 
-            nawet jeśli children będzie puste. pt-20 tworzy lukę na fixed navbar.  md:pt-17.5 pt-17*/}
         <main className={`${serif.variable} ${sans.variable} ${mono.variable} flex-grow  w-full overflow-x-hidden bg-white`}>
           {children}
         </main>

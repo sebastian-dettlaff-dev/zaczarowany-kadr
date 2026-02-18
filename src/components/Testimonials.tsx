@@ -5,7 +5,7 @@ import { InstagramIcon } from './icons/InstagramIcon';
 import { Tiktok } from './icons/TiktokIcon';
 import {GoogleIcon} from  './icons/GoogleIcon';
 import { SOCIAL_MEDIA } from '@/lib/constants';
-//  data structure for reviews;
+
 interface Review {
 	id: number;
 	author: string;
@@ -142,8 +142,7 @@ return (
                 {/* Grid of Testimonials */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {reviews.map((rev,index) => {
-                        // Logika linku: jeśli Facebook/Insta to link do profilu, jeśli Email to brak linku
-						// creating a wrapper component conditionally - if source is not Email, wrap in <a> else in <div>
+                        // lOGIC FOR SOCIAL MEDIA LINK - if source is not 'Email', we treat it as a link to the respective social media profile
                         const isLink = rev.source !== 'Email';
                         const Wrapper = isLink ? 'a' : 'div';
                         
@@ -153,8 +152,8 @@ return (
                                 key={rev.id}
                               {...(isLink ? { 
                                     href: `${SOCIAL_MEDIA.facebook}`, 
-                                    target: "_blank", // Open in new tab
-                                    rel: "noopener noreferrer" // Security best practice
+                                    target: "_blank", 
+                                    rel: "noopener noreferrer" 
                                 } : {})}
                                 className={`
                                     group relative p-8 border border-stone-200 bg-white overflow-hidden
@@ -162,7 +161,7 @@ return (
                                     ${index === 0 ? 'md:col-span-2 lg:col-span-1' : ''}
                                 `}
                             >
-                                {/* TREŚĆ */}
+                                {/* DESCRIPTION */}
                                 <div className="transition-all duration-500 group-hover:blur-sm group-hover:opacity-20">
                                     <div className="flex gap-1 mb-4" aria-label={`Ocena ${rev.rating}} na 5 gwiazdek`}>
                                         {[...Array(rev.rating)].map((_, i) => (
@@ -182,7 +181,7 @@ return (
                                     </div>
                                 </div>
 
-                                {/* SZKLANA NAKŁADKA (tylko dla Social Media) */}
+                                {/* FOR SOCIAL MEDIA */}
                                 {isLink && (
                                     <div className="absolute inset-0 z-10 flex flex-col items-center justify-center 
                                                     opacity-0 group-hover:opacity-100 

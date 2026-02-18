@@ -205,7 +205,7 @@ export default function Home() {
 
 	return (
 		<>
-			{/* Skrypt Schema JSON-LD for robots to understand the offers */}
+			{/* Skript Schema JSON-LD for robots to understand the offers */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}

@@ -1,5 +1,5 @@
 'use client';
-// src/components/Navbar.tsx
+
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -7,7 +7,7 @@ export default function Navbar() {
 	
 
 	const [isOpen, setIsOpen] = useState(false);
-// bg-retro-beige
+
 	return (
 		<nav className={`w-full fixed top-0 z-100 px-6 py-4 transition-colors duration-300
 		${isOpen ?'bg-[#faf9f6] border-b-transparent' : 'bg-black/20 backdrop-blur-md border-b border-white/10'}`}>
@@ -29,18 +29,18 @@ export default function Navbar() {
 				</span>
 				</Link>
 
-                {/* HAMBURGERA BUTTON*/}
+                {/* HAMBURGER BUTTON*/}
                 <button
                     className='md:hidden z-[100] text-retro-grey bg-transparent p-2 focus:outline-none'
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {/* Prosta animacja hamburgera */}
+                    {/* Simple animation of hamburger icon */}
                     <div className={`w-6 h-0.5 bg-current mb-1.5 transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
                     <div className={`w-6 h-0.5 bg-current mb-1.5 transition-all ${isOpen ? 'opacity-0' : ''}`}></div>
                     <div className={`w-6 h-0.5 bg-current transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
                 </button>
 
-                {/* LINKI - DESKTOP */}
+                {/* LINKS - DESKTOP */}
                 <div className='hidden md:flex gap-8 items-center font-medium'>
 					<Link aria-label='Strona glowna' href='/' className='text-white hover:text-retro-orange transition-colors'>Home</Link>
                     <Link aria-label='Poznaj moje portfolio' href='/portfolio' className='text-white hover:text-retro-orange transition-colors'>Portfolio</Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-			{/* MENU MOBILNE */}
+			{/* MENU MOBILE VERSION */}
             <div
                 className={`
                     fixed inset-0 h-screen w-full bg-[#faf9f6]  flex flex-col items-center justify-start gap-6 text-2xl text-retro-black transition-transform duration-500 ease-in-out md:hidden overflow-y-auto pb-10 pt-25 z-90

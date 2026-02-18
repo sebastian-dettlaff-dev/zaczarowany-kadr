@@ -4,15 +4,15 @@ export default function AboutMeIntro() {
 	return (
 		<>
 			<section className='relative w-full h-auto py-16  md:py-24 flex flex-col items-center justify-center overflow-hidden'>
-				{/* Obraz tła z fotografką */}
+				
 				<div className='absolute inset-0 z-0'>
 					<Image
-						src='/assets/images/profesjonalny-aparat-fotograficzny-na-stoliku.webp' // Zmień na ścieżkę do Twojego zdjęcia
+						src='/assets/images/profesjonalny-aparat-fotograficzny-na-stoliku.webp'
 						alt='Fotografka robiąca zdjęcia'
 						fill
 						priority
 						className='object-cover opacity-90 object-[40%_20%] md:object-20%_90%]'
-						// style={{objectPosition: '70% 70%'}} // Niska przezroczystość, aby tekst był czytelny
+						
 					/>
 				</div>
 
@@ -23,9 +23,9 @@ export default function AboutMeIntro() {
                       border border-white/20        /* Delikatna krawędź szkła */
                       rounded-3xl shadow-2xl'
 				>
-					{/* LEWA STRONA: "POLAROIDY" Z PRZYKŁADAMI ZDJĘĆ */}
+					{/* left panel: polaroids */}
 					<div className='hidden w-full md:w-2/3 md:grid md:grid-cols-2 gap-1 pt-10 pb-10'>
-						{/* KARTA POLAROID 1 */}
+						{/*  POLAROID 1 */}
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 -rotate-6 translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
@@ -56,7 +56,7 @@ export default function AboutMeIntro() {
 						<div className='relative bg-white p-3 pb-10 shadow-2xl border border-gray-100 rotate-12 -translate-y-4 hover:rotate-0 transition-transform duration-300'>
 							<div className='relative aspect-square w-full overflow-hidden bg-gray-200 flex items-center justify-center'>
 								<Image
-									src='/assets/images/fotograf_wejherowo_i_okolice_profesjonalna_fotografia.webp' // Zmień na ścieżkę do Twojego zdjęcia
+									src='/assets/images/fotograf_wejherowo_i_okolice_profesjonalna_fotografia.webp' 
 									alt='Zdjecie fotografki w czasie pracy z aparatem fotograficznym , w swoim profesjonalnym studio domowym w Wejherowie.'
 									fill
 									className='object-cover object-top'

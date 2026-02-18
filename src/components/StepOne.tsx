@@ -21,7 +21,7 @@ export default function StepOne({ nextStep, formData }
           <button
           aria-label={`Wybierz rodzaj sesji: ${option}`}
             key={option}
-            onClick={() => nextStep('sessionType', option)} // Zapisuje pod 'type' i idzie dalej
+            onClick={() => nextStep('sessionType', option)} 
             className="flex-1 border border-white/20 bg-white/5 py-6 px-4 rounded-xl text-white text-[10px] tracking-[0.3em] uppercase hover:bg-white/10 hover:border-white/40 transition-all duration-300 group"
           >
             {option}

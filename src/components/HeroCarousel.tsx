@@ -44,7 +44,7 @@ const SLIDES: Slide[] = [
 ]
 
 export default function HeroCarousel() {
-  // Inicjalizacja Embla z pluginem Autoplay (5 sekund odstępu)
+  
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })])
 
   return (
@@ -58,7 +58,6 @@ export default function HeroCarousel() {
               alt={slide.title}
               fill
               className="object-cover"
-              // Priority dla pierwszego zdjęcia (SEO / LCP)
               priority={index === 0}
               sizes="100vw"
             />

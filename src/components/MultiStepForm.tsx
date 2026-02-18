@@ -68,7 +68,7 @@ export default function MultiStepForm() {
     };
 
 
-// };
+
 const handleFinalSubmit = async () => {
   if(!executeRecaptcha){
     alert("Ochrona reCAPTCHA jeszcze się ładuje. Spróbuj za sekundę.");
@@ -78,7 +78,7 @@ const handleFinalSubmit = async () => {
     const token = await executeRecaptcha("contact_form");
     const result = await submitContactForm(formData,token);
     if (result.success) {
-      // Zamiast alertu, idziemy do kroku nr 8 
+      
       setStep(8); 
     } else {
       alert(result.error|| "Błąd weryfikacji anty-botowej." );
@@ -93,7 +93,7 @@ const handleFinalSubmit = async () => {
 
 
 
-// bg-[#9f2828] bg-[#253587] [#0d8383] [#31327f]
+
 
     <div className="relative bg-[#1e1646] h-auto flex flex-col items-center justify-center p-6">
         <div className="absolute inset-0  bg-[radial-gradient(circle_at_bottom,_rgba(40,40,40,0.8)_0%,_rgba(10,10,10,0.5)_40%,_rgba(0,0,0,1)_80%)]"></div>
@@ -101,7 +101,7 @@ const handleFinalSubmit = async () => {
          <div className="relative bg-white/00.7 backdrop-blur-xl border border-white/10  rounded-3xl p-10 shadow-2xl overflow-hidden shadow-black/50">
          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.05] to-transparent pointer-events-none"></div>
 
-         {/* Progress bar and divider area */}
+         
          <div className="mb-10">
              <div className="flex justify-between text-[10px] text-white/40 mb-2 uppercase tracking-widest">
             <span>Mode: Manual</span>
@@ -109,13 +109,13 @@ const handleFinalSubmit = async () => {
           </div>
            
              <div className="relative h-[2px] bg-white/10">
-             {/* 1. Podziałka (Kreski w tle) */}
+             
     <div className="absolute inset-0 border-t border-white/20 flex justify-between px-1">
       {[...Array(25)].map((_, i) => (
         <div 
           key={i} 
           className={`w-[1px] transition-colors duration-500 ${
-            // Sprawdzamy, czy pasek już "przeszedł" przez tę kreskę, żeby ją podświetlić
+            
             (i / 25) * 100 <= ((step + 1) / totalSteps) * 100 
               ? 'bg-cyan-400/60' 
               : 'bg-white/20'
@@ -129,15 +129,7 @@ const handleFinalSubmit = async () => {
             />
             
           </div>
-            {/* divider */}
-            {/* <div className="relative h-6 border-t border-white/20 flex justify-between px-1">
-            {[...Array(20)].map((_, i) => (
-                <div key={i} className={`w-[1px] ${i % 5 === 0 ? 'h-3 bg-white/40' : 'h-1.5 bg-white/20'}`}></div> */}
-            {/* //   <div key={i} className="w-1 h-1 bg-white/20 rounded-full"></div> */}
-            {/* ))} */}
-            {/* progress bar */}
-            {/* <div className="absolute top-[-1px] left=0 h-[2px] bg-cyan-400 transition-all duration-500 shadow-[0_0_10px_#22d3ee]"
-            style={{ width: `${((step + 1) / 8) * 100}%` }}></div> */}
+          
             </div>
          </div>
 
@@ -171,7 +163,7 @@ const handleFinalSubmit = async () => {
           </AnimatePresence>
 
         </div>   
-        {/* footer-status and tryb */}
+        
       
 
              <div className="mt-8 pt-6 border-t border-white/5 flex justify-between items-center text-[9px] text-white/30 tracking-[0.2em]">
@@ -186,10 +178,6 @@ const handleFinalSubmit = async () => {
         </div>
 
 
-          {/* Wyświetlamy podgląd tego, co już wpisano (do testów)
-    //   <pre className="mt-10 text-[10px] bg-stone-100 p-2">
-    //     {JSON.stringify(formData, null, 2)}
-    //   </pre> */}
         </div>
         
     </div>

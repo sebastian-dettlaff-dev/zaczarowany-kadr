@@ -31,7 +31,7 @@ export default function CategorySlider({ images }: { images: PortfolioImage[] })
   const [emblaRef] = useEmblaCarousel({ 
     align: 'start', 
     containScroll: 'trimSnaps',
-    dragFree: true // daje ten "lekki" efekt swipowania jak w Swiperze
+    dragFree: true 
   });
 
 

@@ -22,7 +22,7 @@ const getRegulaminSchema = () => ({
   name: 'Regulamin Sesji Fotograficznych | Zaczarowany Kadr',
   description: 'Zasady rezerwacji, płatności oraz prawa autorskie dotyczące sesji fotograficznych w Zaczarowany Kadr by Klaudia.',
   publisher: {
-    '@id': 'https://zaczarowanykadr.pl/#business' // To łączy regulamin z Twoją firmą z layout.tsx
+    '@id': 'https://zaczarowanykadr.pl/#business' 
   },
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -42,7 +42,7 @@ const getRegulaminSchema = () => ({
     ]
   }
 });
-// Dane regulaminu wyciągnięte do stałej, aby łatwo było je edytować w przyszłości
+// DATA FOR PAGE
 const points = [
   { id: 1, text: "Rezerwacja terminu sesji oznacza akceptację niniejszego regulaminu." },
   { id: 2, text: "Termin sesji ustalany jest indywidualnie. Klient ma możliwość <span class='font-bold text-slate-900 uppercase'>dwukrotnego przełożenia sesji</span> po wcześniejszym poinformowaniu Fotografa." },
@@ -81,7 +81,7 @@ export default function RegulaminPage() {
             </h1>
           </header>
 
-          {/* Treść */}
+          {/* description */}
           <div className="p-8 md:p-16">
             <div className="space-y-8">
               {points.map((point) => (
@@ -100,7 +100,7 @@ export default function RegulaminPage() {
               ))}
             </div>
 
-            {/* Klauzula RODO */}
+            {/*  RODO */}
             <section aria-label="Klauzula RODO" className="mt-20 p-8 bg-neutral-50 rounded-2xl border border-neutral-100">
               <h2 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-4">
                 Klauzula RODO

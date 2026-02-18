@@ -8,9 +8,9 @@ export default function Footer() {
 
 	return (
 		<footer className='w-full bg-retro-black text-retro-beige py-12 px-4 sm:px-6'>
-			{/* Usuwamy kropkę przy flex-wrap i dodajemy min-w-0 */}
+			
 			<div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6 flex-wrap md:gap-8'>
-				{/* KOLUMNA 1 - dodajemy min-w-[250px] aby na małych ekranach nie była zbyt wąska */}
+				{/* COLUMN 1 -  */}
 				<div className='flex-1 min-w-[200px]'>
 					<h3 className='text-3xl text-retro-orange mb-4 italic'>
 						{COMPANY_NAME}
@@ -20,7 +20,7 @@ export default function Footer() {
 					</p>
 				</div>
 
-				{/* KOLUMNA 2 */}
+				{/* COLUMN 2 */}
 				<div className='flex-1 min-w-[140px]'>
 					<h4 className='font-bold mb-4 uppercase tracking-widest  text-retro-orange'>
 						Nawigacja
@@ -86,7 +86,7 @@ export default function Footer() {
 					</ul>
 				</div>
 
-				{/* KOLUMNA 3 - shrink-0 zapobiegnie ściskaniu numeru telefonu */}
+				{/* COLUMN 3 */}
 				<div className='flex-1 min-w-[140px] shrink-0'>
 					<h4 className='font-bold mb-4 uppercase tracking-widest  text-retro-orange'>
 						Kontakt
@@ -115,7 +115,7 @@ export default function Footer() {
 					</ul>
 				</div>
 
-				{/* KOLUMNA 4 */}
+				{/* COLUMN 4 */}
 				<div className='flex-1 min-w-[140px]'>
 					<h4 className='font-bold mb-4 uppercase tracking-widest  text-retro-orange'>
 						Social Media

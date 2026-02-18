@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: path === '' ? 1 : 0.8,
     }));
 
-    // 2. Pobieramy dynamiczne slug-i postów z Sanity
+    // Downloaing blog posts from sanity and mapping them to sitemap format
     const query = `*[_type == "post"] { "slug": slug.current, _updatedAt }`;
     const posts = await client.fetch<{ slug: string; _updatedAt: string }[]>(query);
 

@@ -23,13 +23,13 @@ const [showBanner, setShowBanner] = useState(false);
  
 return ( 
   <div className="fixed bottom-0 left-0 w-full bg-retro-beige text-retro-black z-[100] border-t border-retro-black/10 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
-    {/* Zmniejszono py-4 na mobile i py-6 na desktopie */}
+    
     <div className="max-w-5xl mx-auto px-4 py-4 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
       
       <div className="flex items-center gap-3">
-        {/* Mniejsza ikona na mobile */}
+        
         <span className="text-xl md:text-2xl" aria-label='cookie'>🍪</span>
-        {/* text-xs na mobile, text-sm na desktopie */}
+        
         <p className="text-xs md:text-sm leading-tight md:leading-relaxed max-w-2xl font-sans text-center md:text-left">
           Cenimy Twoją prywatność. Ta strona używa ciasteczek, aby zapewnić Ci jak najlepsze doświadczenia.
         </p>

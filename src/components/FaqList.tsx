@@ -1,11 +1,11 @@
-// components/FaqList.tsx
+
 "use client";
 
 import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 
-// Typy mogą być tutaj lub w osobnym pliku types.ts
+
 export interface FaqItem {
     question: string;
     answer: string;
@@ -43,7 +43,7 @@ export default function FaqList({ categories }: FaqListProps) {
                             ${isOpen ? 'shadow-lg' : 'shadow-sm'}
                         `}
                     >
-                        {/* Górna część: Obrazek + Tytuł */}
+                        
                         <div className="flex flex-col md:flex-row">
                             <div className="relative w-full md:w-1/3 h-[200px]">
                                 <Image
@@ -72,7 +72,7 @@ export default function FaqList({ categories }: FaqListProps) {
                             </div>
                         </div>
 
-                        {/* Rozwijana treść */}
+                        
                         <div
                             className={`
                                 bg-white px-6 overflow-hidden transition-all duration-300 ease-in-out
