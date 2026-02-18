@@ -30,6 +30,19 @@ A modern, responsive photography portfolio built with a focus on performance, SE
    Focused on semantic HTML and advanced metadata optimization using Next.js Metadata API and Schema.org structured data.
 
 ---
+   📸 The Performance Challenge (Optimization)
+One of the biggest challenges was handling high-resolution photography (files up to 10MB) without compromising page load speed.
+
+Cloudinary Integration: Offloaded image storage and processing to Cloudinary, using their dynamic transformation API to serve properly sized WebP/AVIF formats.
+
+Next.js Image + Blur: Implemented placeholder="blur" for all gallery items to maintain a high-end feel even on slower connections.
+
+Result: Achieved a significant reduction in LCP (Largest Contentful Paint) while maintaining crisp visual quality.
+
+🏗️ Content Management
+Sanity CMS: Custom schemas built for the photographer to easily manage blog posts and gallery categories without touching the code.
+
+---
 
 ## 🚀 Getting Started (Local Development)
 
