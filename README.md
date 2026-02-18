@@ -43,12 +43,6 @@ Result: Achieved a significant reduction in LCP (Largest Contentful Paint) while
 Sanity CMS: Custom schemas built for the photographer to easily manage blog posts and gallery categories without touching the code.
 
 ---
-Treść wiadomości Gemini
-To genialny pomysł. W projektach wizualnych (fotografia) SEO to nie tylko dodatek, to fundament, bo roboty Google nie "widzą" zdjęć tak jak my – widzą tylko kod, który im podasz.
-
-Dodanie sekcji o SEO w README pokazuje, że nie jesteś tylko "koderem od UI", ale rozumiesz biznesowy aspekt tworzenia stron.
-
-Oto jak możesz to profesjonalnie opisać w swoim README. Proponuję dodać nową sekcję lub rozbudować istniejącą:
 
 🔍 Search Engine Optimization (SEO) & Accessibility
 To ensure maximum visibility and a great user experience, I implemented a comprehensive SEO strategy:
