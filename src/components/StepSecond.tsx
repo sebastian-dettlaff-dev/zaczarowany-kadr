@@ -6,9 +6,9 @@ interface StepSecondProps {
 
 export default function StepSecond({ nextStep, formData }: StepSecondProps) {
 const plan = [
-    "Pakiet Mini (10 zdjęć)",
-    "Pakiet Standard (20 zdjęć)",
-    "Pakiet Premium (30 zdjęć)"
+    "Pakiet Mini (15 zdjęć)",
+    "Pakiet Standard (25 zdjęć)",
+    "Pakiet Premium (35 zdjęć)"
 ];
 return(
     <div className="space-y-4">
