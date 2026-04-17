@@ -244,10 +244,10 @@ const PORTFOLIO_DATA = [
   },
   {title: "Sesje narzeczeńskie",
     images: [
-      {
-        id: "portfolio/zareczyny_2026/sesja_narzeczenska_trojmiasto_s07g0q",
-        alt: "Sesja narzecenska w trojmiescie, zareczyny, fotografia dla pary w obiektywie Zaczarowany Kadr."
-      },
+      // {
+      //   id: "portfolio/zareczyny_2026/sesja_narzeczenska_trojmiasto_s07g0q",
+      //   alt: "Sesja narzecenska w trojmiescie, zareczyny, fotografia dla pary w obiektywie Zaczarowany Kadr."
+      // },
       {
         id:"portfolio/sesja_narzeczenska/i_said_yes_powiedzialam_tak_sesja_narzeczenska_qzscr1",
         alt:"I said yes powiedzialam tak sesja narzeczenska na Kaszubach."
