@@ -245,7 +245,7 @@ const PORTFOLIO_DATA = [
   {title: "Sesje narzeczeńskie",
     images: [
       {
-        id: "portfolio/zareczyny_2026/sesja_narzeczenska_trojmiasto_s07g0q1_618cb6",
+        id: "portfolio/zareczyny_2026/sesja_narzeczenska_trojmiasto_s07g0q",
         alt: "Sesja narzecenska w trojmiescie, zareczyny, fotografia dla pary w obiektywie Zaczarowany Kadr."
       },
       {
