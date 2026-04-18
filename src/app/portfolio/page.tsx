@@ -139,12 +139,12 @@ const PORTFOLIO_DATA = [
         alt:"Sesja kobieca w domowym studio , kobieta w dzinsach pieknie pozujaca do zdjec."
       },
        {
-        id:"",
-        alt:""
+        id:"sesja_kobieca_bialo_czarny_filtr_oldschool_rdmv8f1_b11b79",
+        alt:"Sesja kobieca z bialo-czarnym filtrem , kobieta pozujaca na sesji fotograficznej w plenerze."
       },
        {
-        id:"",
-        alt:""
+        id:"sesja_kobieca_w_domowym_studio_hkmugc1_cf42fd",
+        alt:"Sesja kobieca w domowym studio , kobieta w dzinsach pozujaca na bialym tle."
       },
        {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_w_domowym_studio_zrelaksowana_u_fotografa_ma1gh7",
@@ -251,24 +251,24 @@ const PORTFOLIO_DATA = [
         alt:"sesja portret w jeziorze natura fotograf"
       },
        {
-        id:"",
-        alt:""
+        id:"sesja_u_fotografa_studio_omowe_w_wejherowie_gmxrjl1_10972c",
+        alt:"sesja u fotografa studio domowe w wejherowie"
       },
        {
-        id:"",
-        alt:""
+        id:"sesja_zdjeciowa_w_wejherowie_ws6szk1_6e5ac6",
+        alt:"Profesjonalna sesja zdjeciowa w wejherowie , kobieta na zmyslowej sesji fotograficznej."
       },
        {
-        id:"",
-        alt:""
+        id:"sesja_zmyslowa_p45c1s1_8c38c8",
+        alt:"Zmyslowa sesja fotograficzna w domowym studio na Kaszubach."
       },
        {
-        id:"",
-        alt:""
+        id:"usmiechnieta_dziewczyna_na_sesji_luzna_atmosfera_scyynl1_14f69e",
+        alt:"Uśmiechnięta dziewczyna na sesji luźna atmosfera, profesjonalna fotografia w wejherowie."
       },
        {
-        id:"",
-        alt:""
+        id:"zmyslowa_sesja_kobieca_ocz75f_0c8bb51",
+        alt:"Zmyslowa sesja kobieca w domowym studio na Kaszubach."
       },
      
     ]
