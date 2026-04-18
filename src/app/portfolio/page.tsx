@@ -134,6 +134,18 @@ const PORTFOLIO_DATA = [
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_fotograficznej_profesjonalne_zdjecia_upvcs2",
         alt:"kobieta na sesji fotograficznej profesjonalne zdjecia"
       },
+        {
+        id:"sesja_kobieca_mrafb11_ddde4a",
+        alt:"Sesja kobieca w domowym studio , kobieta w dzinsach pieknie pozujaca do zdjec."
+      },
+       {
+        id:"",
+        alt:""
+      },
+       {
+        id:"",
+        alt:""
+      },
        {
         id:"portfolio/sesja_kobieca/kobieta_na_sesji_w_domowym_studio_zrelaksowana_u_fotografa_ma1gh7",
         alt:"kobieta na sesji w domowym studio fotograficzny, zrelaksowana i usmiechnieta."
@@ -237,6 +249,26 @@ const PORTFOLIO_DATA = [
       {
         id:"portfolio/sesja_kobieca/sesja_portret_w_jeziorze_natura_fotograf_xt6owp",
         alt:"sesja portret w jeziorze natura fotograf"
+      },
+       {
+        id:"",
+        alt:""
+      },
+       {
+        id:"",
+        alt:""
+      },
+       {
+        id:"",
+        alt:""
+      },
+       {
+        id:"",
+        alt:""
+      },
+       {
+        id:"",
+        alt:""
       },
      
     ]
