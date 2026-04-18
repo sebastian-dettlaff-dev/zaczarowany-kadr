@@ -248,6 +248,10 @@ const PORTFOLIO_DATA = [
         id: "sesja_narzeczenska_trojmiasto_s07g0q1_618cb6",
         alt: "Sesja narzecenska w trojmiescie, zareczyny, fotografia dla pary w obiektywie Zaczarowany Kadr."
       },
+        {
+        id: "pierscionek_zareczynowy_sesja_w_wejherowie_xuc0fa1_256bc2",
+        alt: "Sesja narzecenska w trojmiescie, zareczyny, fotografia dla pary w obiektywie Zaczarowany Kadr."
+      },
       {
         id:"portfolio/sesja_narzeczenska/i_said_yes_powiedzialam_tak_sesja_narzeczenska_qzscr1",
         alt:"I said yes powiedzialam tak sesja narzeczenska na Kaszubach."
