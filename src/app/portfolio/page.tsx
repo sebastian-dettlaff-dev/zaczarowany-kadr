@@ -420,6 +420,22 @@ const PORTFOLIO_DATA = [
     title:"Sesje Okolicznościowe",
     images: [
       {
+        id:"zabawa_u_fotografki_na_wieczorze_panienskim_sesja_u65n63",
+        alt:"Zabawa u fotografki na wieczorze panieńskim, sesja fotograficzna w domowym studio."
+      },
+         {
+        id:"selfie_na_sesji_wieczor_panienski_rpdpez",
+       alt:"Selfie na sesji, wieczor panieński." 
+      },
+      {
+      id:"wieczor_panienski_wspolne_chwile_kn8gni",
+      alt:"Wieczor panieński, wspólne chwile." 
+      },
+      {
+      id:"wieczor_panienski_wspolna_zabawa_p2ku8f",
+      alt:"Wieczor panieński, wspolna zabawa." 
+      },
+      {
         id:"portfolio/sesja-okolicznosciowa-para-w-Swieta-Bozego-Narodzenia-studio-domowe_njvwbw",
         alt:"Sesja okolicznościowa w dniu Bożego Narodzenia w studio domowym."
       },
@@ -487,6 +503,18 @@ const PORTFOLIO_DATA = [
       {
         id:"portfolio/sesja-okolicznosciowa/para-zakochanych-w-swieta-sesja-fotograficzna_spwcxs",
         alt:"Para zakochanych w dniu Bożego Narodzenia na sesji fotograficznej w studio Zaczarowany Kadr."
+      },
+      {
+        id:"wieczor_panienski_wspolna_fotka_na_sesji_ddex1j",
+       alt:"Wieczor panieński, wspolna fotka na sesji." 
+      },
+      {
+        id:"wieczor_panienski_w_trojmiescie_sesja_u_fotografki_zgbiak",
+       alt:"Sesja u fotografki w trojmiescie, wieczor panieński." 
+      },
+      {
+        id:"wieczor_panienski_na_sesji_u_fotografki_knif04",
+       alt:"Wieczor panieński na sesji u fotografki." 
       }
     ]
   }
