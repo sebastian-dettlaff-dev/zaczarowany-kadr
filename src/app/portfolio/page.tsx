@@ -250,7 +250,7 @@ const PORTFOLIO_DATA = [
       },
         {
         id: "pierscionek_zareczynowy_sesja_w_wejherowie_xuc0fa1_256bc2",
-        alt: "Sesja narzecenska w trojmiescie, zareczyny, fotografia dla pary w obiektywie Zaczarowany Kadr."
+        alt: "Sesja narzecenska w trojmiescie z pierscionkiem zareczynowym, fotografia dla pary w obiektywie Zaczarowany Kadr."
       },
       {
         id:"portfolio/sesja_narzeczenska/i_said_yes_powiedzialam_tak_sesja_narzeczenska_qzscr1",
@@ -295,6 +295,29 @@ const PORTFOLIO_DATA = [
       {
         id:"portfoliosesja_narzeczesnka_love_okulary_yqecbn",
         alt:"Sesja narzeczenska z okularami w stylu Love."
+      },
+       {
+        id: "sesja_narzeczenska_w_parku_weo2jz1_e6288c",
+        alt: "Sesja narzeczenska w parku, fotografia dla pary w obiektywie Zaczarowany Kadr."
+      },{
+        id: "sesja_narzeczenska_w_parku_bialo-czarne_fq3psj1_0539b3",
+        alt: "Sesja narzeczenska w parku bialo-czarne filtry , taniec pary , fotografia dla pary w obiektywie Zaczarowany Kadr."
+      },
+      {
+        id: "sesja_zareczynowa_w_trojmiescie_gift_rl0fvu1_1fb4cc",
+        alt: "Sesja zareczynowa w trojmiescie , para z radoscia sie obejmuje, fotografia dla pary w obiektywie Zacz"
+      },
+      {
+        id: "zareczyny_i_wspolne_chwile_na_sesji_u_fotografa_b84m4n1_8d7260",
+        alt: "Zareczyny i wspolne chwile na sesji u fotografa."
+      },
+      {
+        id: "wspolne_chwile_razem_sesja_zaczarowanykadr_ufvllv1_740d6a",
+        alt: "Wspolne chwile razem, fotografia dla pary w obiektywie Zaczarowany Kadr."
+      },
+      {
+        id: "taniec_w_parku_fotograf_hobttp1_5e95d6",
+        alt: "Taniec w parku, fotografia dla pary w obiektywie Zaczarowany Kadr.Uchwyc najwazniejsze chwile."
       }
     ]
   },
