@@ -419,6 +419,10 @@ const PORTFOLIO_DATA = [
   {
     title:"Sesje Okolicznościowe",
     images: [
+       {
+        id:"sesja_zdjeciowa_w_kosciele_chrzest_igjtfc",
+        alt:"Sesja zdjeciowa w kosciele chrzest, fotografia okolicznosciowa w Wejherowie."
+      },
       {
         id:"zabawa_u_fotografki_na_wieczorze_panienskim_sesja_u65n63",
         alt:"Zabawa u fotografki na wieczorze panieńskim, sesja fotograficzna w domowym studio."
@@ -515,6 +519,30 @@ const PORTFOLIO_DATA = [
       {
         id:"wieczor_panienski_na_sesji_u_fotografki_knif04",
        alt:"Wieczor panieński na sesji u fotografki." 
+      },
+       {
+        id:"sesja_okolicznosciowa_w_kosciele_rcecvw",
+        alt:"Sesja zdjeciowa na chrzcie, fotografia okolicznosciowa w Wejherowie."
+      },
+       {
+        id:"sesja_fotograficzna_kornelli_w_dzien_chrztu_wtp6js",
+        alt:"Sesja fotograficzna Kornelli w dzień chrztu w Wejherowie."
+      },
+       {
+        id:"sesja_fotograficzna_dzien_chrztu_piekne_chwile_yhi2y6",
+        alt:"Sesja fotograficzna w dzień chrztu, piekne chwile w Wejherowie."
+      },
+       {
+        id:"sesja_fotograficzna_chwile_radosci_podczas_chrztu_jtyyvy",
+        alt:"Sesja fotograficzna chwile radosci podczas chrztu w Wejherowie."
+      },
+       {
+        id:"chrzest_swiety_w_trojmiescie_najwazniejsze_chwile_z_zaczarowanykadr_ise1vy",
+        alt:"Chrzest święty w trojmiescie, najważniejsze chwile z Zaczarowany Kadr."
+      },
+       {
+        id:"chrzest_swiety_sesja_zdjeciowa_okolicznosciowa_chwila_chrztu_z_udzialem_rodzicow_lig0ug",
+        alt:"Chrzest święty, sesja zdjeciowa okolicznosciowa, chwila chrztu z udzialem rodzicow."
       }
     ]
   }
