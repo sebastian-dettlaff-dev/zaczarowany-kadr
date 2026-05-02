@@ -13,6 +13,7 @@ export default function ReCaptchaWrapper({ children }: { children: React.ReactNo
         defer: false,
         appendTo: "head",
         nonce: undefined
+      
       }}
     >
       {children}
