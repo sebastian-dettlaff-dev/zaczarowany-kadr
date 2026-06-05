@@ -41,6 +41,58 @@ const PORTFOLIO_DATA = [
     title: "Sesje Rodzinne",
     images: [
       {
+        id:"spacer_na_plazy_sesja_fotograficzna_yzmwhi",
+        alt:"Spacer na plazy sesja fotograficzna, rodzina idaca brzegiem morza, sesja rodzinna w plenerze."
+      },
+       {
+        id:"sesja_rodzinna_w_pogodny_dzien_na_plazy_xbvvif",
+        alt:"Sesja rodzinna w pogodny dzien na plazy"
+      },
+       {
+        id:"sesja_rodzinna_W_plenerze_malzenstwo_tvgesu",
+        alt:"Sesja rodzinna w plenerze, malzenstwo z dzieckiem, fotografia w trojmiescie."
+      },
+       {
+        id:"sesja_rodzinna_razem_trojmiasto_ojsegl",
+        alt:"Sesja rodzinna  razem w trojmiescie."
+      },
+       {
+        id:"sesja_rodzinna_fotograficzna_z_dzieckiem_x0nwwq",
+        alt:"Sesja rodzinna fotograficzna z dzieckiem, fotografia w trojmiescie."
+      },
+       {
+        id:"sesja_plener_dziecko_z_rodzicami_na_plazy_w_pochmurny_dzien_jbeofg",
+        alt:"Dziecko z rodzicami na sesji plenerowej w pochmurny dzien."
+      },
+       {
+        id:"sesja_dziecko_z_rodzicami_fotografia_pamaitkowa_iolspw",
+        alt:"Sesja fotograficzna z dzieckiem i rodzicami, pamiatka rodzinna."
+      },
+       {
+        id:"rodzina_na_Sesji_plenerowej_u_fotografa_k36r2b",
+        alt:"Rodzina na sesji plenerowej u fotografa."
+      },
+       {
+        id:"rodzina_na_Sesji_foto_wejherowo_i_okolice_ufmrkm",
+        alt:"Rodzina na sesji fotograficznej w Wejherowie i okolicach."
+      },
+       {
+        id:"radosne_Dziecko_z_rodzicami_na_plazy_zi4xfr",
+        alt:"Radosne dziecko z rodzicami na plazy."
+      },
+       {
+        id:"para_na_Sesji_zdjeciowej_w_plenerze_bs74lr",
+        alt:"Para na sesji zdjeciowej w plenerze."
+      },
+       {
+        id:"mama_z_dzieckiem_na_Sesji_zdjeciowej_e7usbd",
+        alt:"Mama z dzieckiem na sesji zdjeciowej."
+      },
+       {
+        id:"dziecko_bawiace_sie_na_plazy_fotografia_Dziecieca_ipbr5v",
+        alt:"Dziecko bawiace sie na plazy, fotografia Dziecieca."
+      },
+      {
         id:"portfolio/sesje_rodzinne/chlopak-bawiacy-sie-w-lesie_uvgpio", 
         alt:"Sesja rodzinna - chlopak bawiacy sie w lesie"
       },
