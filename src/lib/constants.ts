@@ -1,3 +1,13 @@
+export const SITE_URL = "https://zaczarowanykadr.pl";
+
+export const SEO_KEYWORDS = [
+  "fotograf wejherowo",
+  "sesja zdjęciowa kaszuby",
+  "fotografia rodzinna pomorskie",
+  "sesja kobieca trójmiasto",
+  "fotograf na kaszubach",
+];
+
 export const COMPANY_NAME ="Zaczarowany Kadr";
 export const COMPANY_EMAIL = "kontakt@zaczarowany-kadr.pl";
 export const COMPANY_PHONE = "+ 48 790 491 067";

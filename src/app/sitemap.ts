@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
+import { getAllLocationPageSlugs } from "@/lib/locationLandings";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://zaczarowanykadr.pl';
@@ -15,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/faq',
         '/regulamin',
         '/polityka',
+        ...getAllLocationPageSlugs().map((slug) => `/${slug}`),
     ].map((path) => ({
         url: `${baseUrl}${path}`,
         lastModified: new Date(),

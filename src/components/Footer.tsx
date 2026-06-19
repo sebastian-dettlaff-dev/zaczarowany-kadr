@@ -2,6 +2,11 @@
 import React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
+import {
+  LOCATION_LANDINGS,
+  LOCATION_SLUGS,
+  getLocationPath,
+} from "@/lib/locationLandings";
 import { COMPANY_NAME, COMPANY_PHONE } from '@/lib/constants';
 import { Phone, Mail, MapPin, X } from 'lucide-react';
 import SocialMedia from './SocialMedia';
@@ -86,6 +91,29 @@ export default function Footer() {
 							</Link>
 						</li>
 						
+					</ul>
+				</div>
+
+				{/* COLUMN — LOKALIZACJE SEO */}
+				<div className='flex-1 min-w-[160px]'>
+					<h4 className='font-bold mb-4 uppercase tracking-widest text-retro-orange'>
+						Fotografia lokalnie
+					</h4>
+					<ul className='flex flex-col gap-2 text-sm'>
+						{LOCATION_SLUGS.map((slug) => {
+							const location = LOCATION_LANDINGS[slug];
+							return (
+								<li key={slug}>
+									<Link
+										aria-label={location.breadcrumbLabel}
+										href={getLocationPath(slug)}
+										className='hover:text-retro-orange transition'
+									>
+										{location.footerLinkLabel}
+									</Link>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 
