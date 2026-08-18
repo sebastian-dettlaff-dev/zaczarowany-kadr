@@ -10,9 +10,9 @@ interface plan_Details{
 
 }
 const price_Plans:plan_Details[] =[
-    {price:"450 PLN",  name:"MINI",description:"Pakiet ten zawiera 15 zdjec do wyboru (Kazde dodatkowe ujecie 20 PLN).Czas trwania sesji to 45 minut - bez roznicy na rodzaj sesji.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:"something"},
-    {price:"650 PLN",  name:"STANDARD",description:"Pakiet ten zawiera 25 zdjec do wyboru (Kazde dodatkowe ujecie 20 PLN).Czas trwania sesji to 60 minut - bez roznicy na rodzaj sesji.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:""},
-    {price:"850 PLN",  name:"PREMIUM",description:"Pakiet ten zawiera 35 zdjec do wyboru (Kazde dodatkowe ujecie 20 PLN).Czas trwania sesji to 60 minut do maksymalnie 2 godzin - bez roznicy na rodzaj sesji.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:""},
+    {price:"450 PLN",  name:"MINI",description:"Pakiet ten zawiera 10 zdjec do wyboru (Kazde dodatkowe ujecie 30 PLN).Czas trwania sesji to 60 minut - bez roznicy na rodzaj sesji.Krótki filmik z sesji fotograficznej GRATIS.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:"something"},
+    {price:"650 PLN",  name:"STANDARD",description:"Pakiet ten zawiera 20 zdjec do wyboru (Kazde dodatkowe ujecie 30 PLN).Czas trwania sesji to 90 minut - bez roznicy na rodzaj sesji.Krótki filmik z sesji fotograficznej GRATIS.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:""},
+    {price:"850 PLN",  name:"PREMIUM",description:"Pakiet ten zawiera 30 zdjec do wyboru (Kazde dodatkowe ujecie 30 PLN).Czas trwania sesji to 120 minut - bez roznicy na rodzaj sesji.Krótki filmik z sesji fotograficznej GRATIS. 10 odbitek + eleganckie pudełko.",src_Image:"/assets/images/pexels-octavio-j-garcia-n-703604-1538077.jpg",alt_title:""},
     ]
 
 export const pricePlanPageSchemaData = {
