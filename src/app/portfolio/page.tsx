@@ -176,6 +176,34 @@ const PORTFOLIO_DATA = [
         id:"portfolio/sesje_rodzinne/synek-tulacy-mame_bwyixx", 
         alt:"Synek tulacy mame , na sesji rodzinnej.Razem idacy droga."
       },
+      {
+        id:"noworodek_sesja_rodzinna_oasqoj",
+        alt:"Noworodek na sesji rodzinnej — delikatna pamiatka pierwszych chwil z rodzicami."
+      },
+      {
+        id:"sesja_fotograficzna_rodzinna_hi1fzx",
+        alt:"Sesja fotograficzna rodzinna — naturalne kadry pelne emocji i bliskosci."
+      },
+      {
+        id:"sesja_fotograficzna_rodzinna_matka_z_dzieckiem_uklwks",
+        alt:"Sesja fotograficzna rodzinna — matka z dzieckiem w czulym, naturalnym ujeciu."
+      },
+      {
+        id:"sesja_fotograficzna_rodzinna_pomorskie_bgm6yz",
+        alt:"Sesja fotograficzna rodzinna w pomorskiem — plenerowa pamiatka rodzinna."
+      },
+      {
+        id:"sesja_fotograficzna_rodzinna_matka_z_dzieckiem_usmiechajacy_sie_f1n96y",
+        alt:"Sesja fotograficzna rodzinna — matka z usmiechnietym dzieckiem, radosna pamiatka."
+      },
+      {
+        id:"sesja_rodzinna_dziecko_z_rodzicami_oexrdb",
+        alt:"Sesja rodzinna — dziecko z rodzicami, wspolne chwile pelne ciepla."
+      },
+      {
+        id:"tata_z_dzieckiem_sesja_rodzinna_kd2zwm",
+        alt:"Tata z dzieckiem na sesji rodzinnej — czula, naturalna pamiatka ojcostwa."
+      },
     ] 
     
   },
@@ -595,6 +623,66 @@ const PORTFOLIO_DATA = [
        {
         id:"chrzest_swiety_sesja_zdjeciowa_okolicznosciowa_chwila_chrztu_z_udzialem_rodzicow_lig0ug",
         alt:"Chrzest święty, sesja zdjeciowa okolicznosciowa, chwila chrztu z udzialem rodzicow."
+      },
+      {
+        id:"impreza_okolicznosciowa_18stka_onopjm",
+        alt:"Impreza okolicznosciowa — osiemnastka, reportaz z zabawy i wspolnych chwil."
+      },
+      {
+        id:"wieczor_18stka_wspolne_zdjecie_pamiatka_xpu7u4",
+        alt:"Wieczor osiemnastki — wspolne zdjecie pamiatkowe z gosciami."
+      },
+      {
+        id:"wieczor_pelen_Zabawa_tanecznie_jobgqr",
+        alt:"Wieczor pelen zabawy — taneczne chwile na imprezie okolicznosciowej."
+      },
+      {
+        id:"zabawa_na18stke_wieczor_zabaw_nyhh5z",
+        alt:"Zabawa na osiemnastke — wieczor pelen energii i radosci."
+      },
+      {
+        id:"zabawa_na_imprezie_sesja_fotograficzna_zjneue",
+        alt:"Zabawa na imprezie — sesja fotograficzna okolicznosciowa w stylu reportazu."
+      },
+      {
+        id:"zabawa_na_osiemnastke_18_vtzx6q",
+        alt:"Zabawa na osiemnastke — naturalne kadry z urodzinowej imprezy."
+      },
+      {
+        id:"dziewczyny_2026_na_sesji_njmbgt",
+        alt:"Dziewczyny na sesji okolicznosciowej — wspolne, radosne zdjecie pamiatkowe."
+      },
+      {
+        id:"dziewczyny_na_wieczorze_panienskim_xiebmo",
+        alt:"Dziewczyny na wieczorze panienskim — zabawa i wspolne chwile przed slubem."
+      },
+      {
+        id:"dziewczyny_na_wieczorze_panienskim_2026_ovtz5l",
+        alt:"Dziewczyny na wieczorze panienskim — pamiatkowe zdjecie z dziewczynami."
+      },
+      {
+        id:"sesja_wieczor_panienski_panna_mloda_nttvsz",
+        alt:"Sesja na wieczorze panienskim — panna mloda w centrum uwagi."
+      },
+      {
+        id:"sesja_wieczor_panienski_panna_mloda_z_kolezanka_op1pyc",
+        alt:"Sesja na wieczorze panienskim — panna mloda z kolezanka, czule wspolne ujecie."
+      },
+      {
+        id:"she-said-yes-photo_qz1u23",
+        alt:"She said yes — pamiatkowe zdjecie z wieczoru panienskiego."
+      },
+      {
+        id:"usmiechnieta_dziewczyna_na_wieczorze_panienskim_ly6mzu",
+        alt:"Usmiechnieta dziewczyna na wieczorze panienskim — radosny portret okolicznosciowy."
+      },
+      {
+        id:"wspolne_zdjecie_wieczor_panienski_xeb3hk",
+        alt:"Wspolne zdjecie z wieczoru panienskiego — grupowa pamiatka przed slubem."
+      },
+      {
+        id:"zabawa_na_wieczorze_panienskim_dz5san",
+        alt:"Zabawa na wieczorze panienskim — reportaz pelen smiechu i energii."
       }
     ]
   }
